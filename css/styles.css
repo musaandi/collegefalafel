@@ -704,6 +704,18 @@ address {
   margin-bottom: 10px;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
+.text-about-us {
+  font-size: 1.25em;
+}
+
+.section-about-us {
+  margin-bottom: 20px;
+  display: block;
+}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
