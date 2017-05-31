@@ -1,0 +1,35 @@
+<h2>Catering</h2>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <p>Catering at College Falafel is simple. We offer two types of catering packages; a large order of our typical menu items or customized platters. Platters range from completely vegetarian, to a meat lover’s buffet, all the way to a platter full of our unique desserts and everything in between.</p>
+  <p>To place an order please call us at (416) 532-8698 or fill out the contact form below.</p>
+  </div>
+</div>
+
+<div id="" class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="well">
+      <h5>Make A Catering Request</h5>
+      <form method="POST" action="http://collegefalafel.com/api/v1/mailer.php">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <input type="text" placeholder="Enter Your Name" name="name" id="input" class="form-control" value="" required="required">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <input type="email" placeholder="Enter Your Email" name="email" id="input" class="form-control" value="" required="required">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <input type="tel" placeholder="Enter Your Phone Number" name="phone" id="input" class="form-control" value="" required="required">
+        </div>
+      </div>
+      <div class="row top-clear-sm">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <textarea placeholder="Enter Message (optional)" name="message" id="input" class="form-control" rows="3" required="required"></textarea>
+        </div>
+      </div>
+      <input type="text" value="catering" name="type" style="display: none;">
+      <input type="submit" class="top-clear-sm btn btn-primary btn-lg"></input>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,868 @@
+body {
+  background-color: rgba(246, 242, 212, 0.73);
+  background-image: url("../img/food-blur-bg-compressed.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  color: black;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+#main-banner {
+  height: 230px;
+  /*background-color: rgb(255, 255, 255, 0.95);*/
+}
+
+
+#main-nav {
+  height: 50px;
+  background-color: #fcfaef;
+  /*background-color: rgba(252, 250, 239, 0.73);*/
+}
+
+#main-view {
+  padding-top: 20px;
+  background-color: rgba(246, 242, 212, 0.73);
+}
+
+#main-info {
+  height: 28px;
+  background-color: rgba(246, 242, 212, 0.73);
+  background-opacity: 0.73;
+  text-align: center;
+}
+
+#main-info {
+  padding: 4px;
+}
+
+#main-info-text {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+
+#intro-text {
+  font-size: 22px;
+  line-height: 25px;
+  font-weight: 100;
+}
+
+#leaf-and-fire-logo {
+  width: 300px;
+  height: 190px;
+  float: left;
+  background-image: url("../img/leaf-and-fire-vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#small-leaf-and-fire {
+  width: 100px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background-image: url("../img/leaf-and-fire-vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#main-head-right {
+  padding: 13px;
+  float: left;
+  height: 190px;
+  text-align: center;
+}
+
+#main-header {
+  display: table;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#menu-center {
+  display: table;
+  margin: 0 auto;
+  line-height: 35px;
+}
+
+#banner-head {
+  margin: 25px 0px 0px 0px;
+  font-size: 60px;
+  letter-spacing: -2px;
+}
+
+#banner-sub1 {
+  font-size: 15px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-left: 8px;
+}
+
+#banner-sub2 {
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-top: 6px;
+}
+
+#view-intro {
+  text-align: center;
+}
+
+
+
+.thin {
+  font-weight: 100;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.test {
+  border: 1px solid pink;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+.menu li {
+  font-size: 26px;
+  font-weight: 100;
+  display: inline;
+  float: left;
+}
+
+.menu > li:before {
+  content: "";
+  padding-right: 20px;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: #D82927;
+  text-decoration: none;
+}
+
+.space-clear {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(246, 242, 212, 0.73);
+}
+
+/*.img-circle {
+  border-radius: 50%;
+}
+*/
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.thumbnail {
+  border: none;
+  background-color: rgba(0,0,0,0);
+}
+
+.thumbnail > .showcase, .thumbnail a > .showcase {
+    border-radius: 50%;
+}
+
+.caption h3 {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.read-more-btn {
+  text-transform: uppercase;
+  color: #d82927;
+  padding: 10px;
+  border: 1px solid #d82927;
+  text-decoration: none;
+}
+
+.read-more-btn:hover {
+  text-decoration: none;
+  /*opacity: 0.5;*/
+  border: 1px solid black;
+  color: black;
+}
+
+.circle-desc {
+  margin-bottom: 25px;
+}
+
+#site-footer {
+  text-align: center;
+  font-size: 12px;
+  background-color: rgba(246, 242, 212, 0.73);
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.centered {
+  text-align: center;
+}
+
+#home-recognition {
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+#home-bottom {
+  box-shadow: none;
+}
+
+#home-bottom-title {
+  font-weight: 100;
+  margin-top: 0px;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#social-icons {
+  width: 100%;
+  text-align: center;
+}
+
+#doordash-action-btn a {
+  margin-bottom: 30px;
+}
+
+#home-bottom .jumbotron {
+  /*text-align: center;*/
+  padding: 40px;
+}
+
+#doordash-button {
+  display: inline-block;
+  width: 100%;
+}
+
+#doordash-logo {
+  height: 50px;
+  text-align: center;
+}
+
+#doordash-header {
+  margin-top: 15px;
+  width: 100%;
+}
+
+#doordash-header h3 {
+  color: #d82927;
+  text-transform: uppercase;
+  margin: 0px;
+  margin-top: 2px;
+  letter-spacing: 4px;
+  padding-left: 20px;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+#doordash-header h4 {
+  color: #d82927;
+  text-transform: uppercase;
+  margin: 0px;
+  letter-spacing: 4px;
+  padding-left: 20px;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+#doordash-deal-text {
+  text-align: center;
+  font-size: 1.7em;
+}
+
+#doordash-code-text {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 100;
+}
+
+.panel-primary > .panel-heading {
+    color: #ffffff;
+    background-color: #d82927;
+    border-color: #d82927;
+}
+
+.red {
+  color: #d82927;
+}
+
+#doordash-action-btn {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#doordash-action-btn a {
+  margin-top: 15px;
+  background-color: #d82927;
+}
+
+#doordash-action-btn a:active {
+  margin-top: 15px;
+  background-color: #d82927;
+}
+
+.left-clear {
+  padding-left: 10px;
+}
+
+a i {
+  color: black;
+  cursor: pointer;
+}
+
+a i:hover {
+  color: #d82927;
+}
+
+#home-contact-list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+#home-bottom {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  /*margin-left: 10px;*/
+  /*margin-right: 10px;*/
+}
+
+.home-hours {
+  font-size: 1.2em;
+  list-style: none;
+  padding-left: 0px;
+  /*padding-top: 40px;*/
+}
+
+address {
+  font-size: 1.2em;
+}
+
+.float-right {
+  float: right;
+}
+
+.media-object {
+  max-height: 150px;
+}
+
+.media-heading {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.media-heading {
+  color: #d82927;
+}
+
+.menu-hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: black;
+}
+
+.food-desc {
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.food-num {
+  width: 30px;
+  height: 30px;
+  background-color: #d82927;
+  position: absolute;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.image-menu-label {
+  width: auto;
+  height: 25px;
+  background-color: #d82927;
+  position: absolute;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1.6;
+  padding: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.menu-thumb {
+  border-radius: 0px;
+}
+
+.menu-showcase img {
+  width: 33%;
+}
+
+.menu-showcase {
+  padding: 30px 30px 10px 30px;
+}
+
+.menu-double-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 1%;
+  width: 48%;
+  height: 255px;
+  display: inline-block;
+  float: left;
+}
+
+.menu-triple-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 1%;
+  width: 31%;
+  height: 255px;
+  display: inline-block;
+  float: left;
+}
+
+.menu-section-title {
+  font-size: 2em;
+  margin: 0;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.menu-section-desc {
+  font-size: 1.2em;
+}
+
+#menu-fixed {
+   display: none;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:90px;
+   width:100%;
+   background: #D82927;
+}
+
+.menu-fixed-text {
+  font-size: 1em;
+  color: white;
+  line-height: 1.3;
+  font-weight: 100;
+}
+
+#menu-fixed-info {
+  padding: 10px;
+}
+
+/*Responsive Adaptive Design Styles*/
+
+#mobile-nav {
+  background-color: #fcfaef;
+}
+
+#mobile-menu {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
+
+#mobile-menu li {
+  color: black;
+  font-size: 2em;
+}
+
+#mobile-menu a {
+  color: black;
+}
+
+#mobile-menu a:hover {
+  color: #d82927;
+  text-decoration: none;
+}
+
+#mobile-menu-toggle {
+  margin-top: 15px;
+}
+
+#mobile-info {
+  background-color: rgba(246, 242, 212, 0.73);
+  text-align: center;
+  font-size: 1em;
+  padding-top: 10px;
+}
+
+#mobile-banner #leaf-and-fire-logo {
+  width: 180px;
+  height: 140px;
+  margin-top: 36px;
+}
+
+.mobile-show {
+  display: none;
+}
+
+#contact_main address {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#contact_main h4 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#contact_main .home-hours {
+  font-size: 1.4em;
+}
+
+.call-for-pickup {
+  opacity: 0.4;
+}
+
+.store-hours-title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.top-clear-sm {
+  margin-top: 15px;
+}
+
+.well {
+  border-radius: 5px;
+}
+
+#menu_buttons {
+  margin-bottom: 15px;
+}
+
+#menu_buttons .btn {
+  box-shadow: none;
+  font-size: 1em;
+}
+
+#menu_buttons .btn:focus {
+  outline: none;
+}
+
+#menu_buttons .btn-group {
+  margin: 0 auto;
+}
+
+#menu_buttons_fixed {
+  position: fixed;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  background-color: #D82927;
+}
+
+#menu_buttons_fixed_inner {
+  text-align: center;
+}
+
+.menu_button_fixed_item {
+  color: white;
+  background-color: #D82927;
+  margin: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1em
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.menu_button_fixed_item:hover {
+  text-decoration: none;
+  color: white;
+  opacity: 0.9;
+}
+
+.center-div-outer {
+  width: 100%;
+  display: inline-block;
+}
+
+.center-div-inner {
+  display: table;
+  margin: 0 auto;
+}
+
+#modal {
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  z-index: 3;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+#modal-backdrop {
+  background-color: black;
+  display: inline-block;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  /*display: none;*/
+}
+
+.modal-img {
+  height: 80%;
+  width: 90%;
+  margin: 5% auto;
+  background-size: contain;
+  background-image: url(img/home-circle2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  position: relative;
+}
+
+.vegan-icon {
+  background: url(../img/vegan.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  background-size: contain;
+  display: inline-block;
+  padding-bottom: 21px;
+  margin-bottom: -2px;
+}
+
+#modal {
+  display: none;
+}
+
+.modal-img {
+  display: none;
+}
+
+.tiny-doordash {
+  height: 30px;
+  float: left;
+}
+
+.tiny-doordash-text {
+  font-size: 1.5em;
+  padding: 5px;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+
+#doordash-mini {
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.bottom-clear {
+  margin-bottom: 10px;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */
+
+
+
+
+}
+
+@media (max-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+
+  #mobile-banner #banner-sub1 {
+    font-size: 0.8em;
+  }
+
+  #tiny-doordash-logo {
+    display: none;
+  }
+
+
+}
+
+@media (max-width:590px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  #mobile-banner #leaf-and-fire-logo {
+    display: none;
+  }
+
+  #mobile-banner #main-head-right {
+    display: none;
+  }
+
+  #main-header {
+    padding-top: 0px;
+  }
+
+  #tiny-screen-banner #banner-sub1, #tiny-screen-banner #banner-sub2, #tiny-screen-banner #banner-head {
+    text-align: center;
+    padding: 0px;
+  }
+
+  #tiny-screen-banner #banner-head {
+    font-size: 4em;
+  }
+
+  .home-bottom-title {
+    margin-top: 20px;
+  }
+
+  #menu_buttons .btn {
+      font-size: 0.7em;
+      padding-left: 5px;
+      padding-right: 5px;
+  }
+
+  .image-menu-label {
+    position: inherit;
+    height: auto;
+    width: 100%;
+  }
+
+}
+
+@media (min-width:591px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+  #small-leaf-and-fire {
+    display: none;
+  }
+
+  #tiny-screen-banner {
+    display: none;
+  }
+
+
+
+}
+
+@media (max-width:760px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  #doordash-action-btn a{
+    margin-bottom: 0px;
+  }
+
+  .mobile-show {
+    display: inherit;
+  }
+
+  #main-info {
+    display: none;
+  }
+  #main-nav {
+    display: none;
+  }
+  #main-banner {
+    display: none;
+  }
+
+  body {
+    background-image: url("../img/food-blur-bg-mobile.png");
+  }
+
+  #doordash-header h3 {
+    font-size: 1.2em;
+  }
+
+  .home-bottom-title {
+    margin-top: 40px;
+  }
+
+
+}
+
+@media (min-width:761px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+  #mobile-nav {
+    display: none;
+  }
+  #mobile-info {
+    display: none;
+  }
+  #mobile-banner {
+    display: none;
+  }
+
+}
+
+@media (max-width:880px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  #main-info {
+    height: 25px;
+  }
+
+  #main-info-text {
+    font-size: 10px;
+  }
+
+
+}
+
+@media (max-width:1025px) { /* big landscape tablets, laptops, and desktops */
+
+
+
+
+}
+
+@media (max-width:1281px) { /* hi-res laptops and desktops */
+
+
+
+
+
+}

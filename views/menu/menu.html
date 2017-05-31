@@ -1,0 +1,423 @@
+<div onclick="closeModal();" id="modal">
+  <div id="modal-backdrop"></div>
+  <div id="modal-img-1" class="modal-img" style="background-image: url('img/menu-sandwich-donair.jpg');"></div>
+  <div id="modal-img-2" class="modal-img" style="background-image: url('img/menu-sandwich-kefta.jpg');"></div>
+  <div id="modal-img-3" class="modal-img" style="background-image: url('img/menu-plates-chicken.jpg');"></div>
+  <div id="modal-img-4" class="modal-img" style="background-image: url('img/menu-plates-veg.jpg');"></div>
+  <div id="modal-img-5" class="modal-img" style="background-image: url('img/menu-side-samousa.jpg');"></div>
+  <div id="modal-img-6" class="modal-img" style="background-image: url('img/menu-side-grape.jpg');"></div>
+  <div id="modal-img-7" class="modal-img" style="background-image: url('img/menu-side-salads.jpg');"></div>
+  <div id="modal-img-8" class="modal-img" style="background-image: url('img/menu-side-falafel.jpg');"></div>
+  <div id="modal-img-9" class="modal-img" style="background-image: url('img/menu-side-stuffed.jpg');"></div>
+  <div id="modal-img-10" class="modal-img" style="background-image: url('img/menu-desserts-almond.jpg');"></div>
+  <div id="modal-img-11" class="modal-img" style="background-image: url('img/menu-desserts-baklava.jpg');"></div>
+</div>
+
+<div class="row bottom-clear">
+  <div class="text-center">* All items on our menu are certified halal</div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div style="text-align: center">
+      <div id="doordash-mini">
+        <img id="tiny-doordash-logo" class="tiny-doordash" src="img/doordash-logo-red.png"/>
+        <a href="https://www.doordash.com/store/30377/?utm_source=partner-link&utm_medium=website&utm_campaign=30377" class="tiny-doordash-text">ORDER DELIVERY VIA DOORDASH</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="menu_buttons" class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="center-div-outer">
+      <div class="btn-group center-div-inner" role="group" aria-label="...">
+        <a ng-click="scrollTo('menu-sandwiches')" class="btn btn-primary">SANDWICHES</a>
+        <a ng-click="scrollTo('menu-plates')" class="btn btn-primary">PLATES</a>
+        <a ng-click="scrollTo('menu-sidedishes')" class="btn btn-primary">SIDE DISHES</a>
+        <a ng-click="scrollTo('menu-combos')" class="btn btn-primary">COMBOS</a>
+        <a ng-click="scrollTo('menu-desserts')" class="btn btn-primary">DESSERTS</a>
+        <a ng-click="scrollTo('menu-vegan')" class="btn btn-primary">VEGAN</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="menu_buttons_fixed" style="display: none;">
+  <div id="menu_buttons_fixed_inner">
+    <a ng-click="scrollTo('menu-sandwiches')" class="menu_button_fixed_item">SANDWICHES</a>
+    <a ng-click="scrollTo('menu-plates')" class="menu_button_fixed_item">PLATES</a>
+    <a ng-click="scrollTo('menu-sidedishes')" class="menu_button_fixed_item">SIDE DISHES</a>
+    <a ng-click="scrollTo('menu-combos')" class="menu_button_fixed_item">COMBOS</a>
+    <a ng-click="scrollTo('menu-desserts')" class="menu_button_fixed_item">DESSERTS</a>
+    <a ng-click="scrollTo('menu-vegan')" class="menu_button_fixed_item">VEGAN</a>
+  </div>
+</div>
+
+<div id="menu-sandwiches" class="well">
+  <h5 class="menu-section-title text-center">Sandwiches</h5>
+  <p class="menu-section-desc text-center">*sandwiches are served with your choice of <a href="#" data-toggle="tooltip" data-placement="bottom" title="lettuce, tomato, red onions, baby spinach, tabouli salad, pickled turnip, pickled red cabbage, pickled beet, green peppers, hot banana peppers, and cucumbers">toppings</a> and <a href="#" data-toggle="tooltip" data-placement="bottom" title="tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce">sauces</a></p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="menu-double-image" onclick="openImgModal(1)" style="background-image: url('img/menu-sandwich-donair.jpg');"><div class="food-num">1</div></div>
+      <div class="menu-double-image" onclick="openImgModal(2)" style="background-image: url('img/menu-sandwich-kefta.jpg');"><div class="food-num">7</div></div>
+    </div>
+  </div>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$9.00</span>1. East Coast Donair</h4>
+
+      <p class="food-desc">White or whole wheat pita - filled with donair meat & toppings of your choice with sweet donair sauce.</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$8.50</span>2. Chicken Shawarma</h4>
+
+      <p class="food-desc">White or whole wheat pita - filled with marinated chicken & toppings of your choice.</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$9.00</span>3. Beef Shawarma</h4>
+      <p class="food-desc">White or whole wheat pita - filled with marinated beef & toppings of your choice with sweet donair sauce.</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$10.00</span>4. Lamb Shawarma</h4>
+      <p class="food-desc">White or whole wheat pita - filled with marinated lamb & toppings of your choice.</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$9.00</span>5. Chicken Breast Kebab</h4>
+      <p class="food-desc">White or whole wheat pita - filled with marinated chicken breast & toppings of your choice with sweet donair sauce.</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$9.00</span>6. Veal Liver</h4>
+      <p class="food-desc">White or whole wheat pita - filled with marinated veal liver & toppings of your choice.</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$9.00</span>7. Kefta Burger</h4>
+      <p class="food-desc">White or whole wheat pita - filled with lean ground beef & toppings of your choice with sweet donair sauce.</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.50</span>8. Falafel <div class="vegan-icon"></div></h4>
+      <p class="food-desc">White or whole wheat pita - filled with 3 falafel balls & toppings of your choice.</p>
+      <hr class="menu-hr">
+
+      <div class="row top-clear-sm">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$8.50</span>9. Vegetarian <div class="vegan-icon"></div></h4>
+          <p class="food-desc">White or whole wheat pita - filled with stuffed eggplant & toppings of your choice.</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$10.00</span>10. Fish Fillet</h4>
+          <p class="food-desc">White or whole wheat pita - filled with marinated fish fillet & toppings of your choice.</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$8.00</span>11. Breakfast Sandwich</h4>
+          <p class="food-desc">White or whole wheat pita - filled with scrambled eggs & toppings of your choice.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-plates" class="well">
+  <h5 class="menu-section-title text-center">Plates</h5>
+  <p class="menu-section-desc text-center">*plates are served with your choice of sides, <a href="#" data-toggle="tooltip" data-placement="bottom" title="lettuce, tomato, red onions, tabouli salad, white turnip, red cabbage, beets, green peppers, hot banana peppers, and cucumbers">toppings</a> and <a href="#" data-toggle="tooltip" data-placement="bottom" title="tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce">sauces</a></p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="menu-double-image" onclick="openImgModal(3)" style="background-image: url('img/menu-plates-chicken.jpg');"><div class="food-num">2</div></div>
+      <div class="menu-double-image" onclick="openImgModal(4)" style="background-image: url('img/menu-plates-veg.jpg');"><div class="food-num">9</div></div>
+    </div>
+  </div>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>1. Donair (East Coast)</h4>
+        <p class="food-desc">Rice and potatoes - with donair meat & sides and toppings of your choice with sweet donair sauce.</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>2. Chicken Shawarma</h4>
+        <p class="food-desc">Rice and potatoes - with marinated chicken & sides, toppings and sauces of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>3. Beef Shawarma</h4>
+      <p class="food-desc">Rice and potatoes - with marinated beef & sides, toppings and sauces of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$15.00</span>4. Lamb Shawarma</h4>
+      <p class="food-desc">Rice and potatoes - with marinated lamb & sides, toppings and sauces of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>5. Chicken Breast Kebab</h4>
+      <p class="food-desc">Rice and potatoes - with marinated chicken breast & sides, toppings and sauces of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>6. Veal Liver</h4>
+      <p class="food-desc">Rice and potatoes - with marinated veal liver & sides, toppings and sauces of your choice</p>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>7. Kefta Burger</h4>
+      <p class="food-desc">Rice and potatoes - with lean ground beef & sides, toppings and sauces of your choice</p>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$13.00</span>8. Falafel <div class="vegan-icon"></div></h4>
+      <p class="food-desc">Rice and potatoes - with 3 falafel balls & sides, toppings and sauces of your choice</p>
+      <hr class="menu-hr">
+      <div class="row top-clear-sm">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>9. Vegetarian <div class="vegan-icon"></div></h4>
+          <p class="food-desc">Rice and potatoes - with stuffed eggplant & sides, toppings and sauces of your choice</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$15.00</span>10. Fish Fillet</h4>
+          <p class="food-desc">Rice and potatoes - with marinated fish fillet & sides, toppings and sauces of your choice</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$15.00</span>11. Shrimp</h4>
+          <p class="food-desc">Rice and potatoes - with shrimp & sides, toppings and sauces of your choice</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-sidedishes" class="well">
+  <h5 class="menu-section-title text-center">Side Dishes</h5>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="menu-triple-image" onclick="openImgModal(5)" style="background-image: url('img/menu-side-samousa.jpg');"><div class="image-menu-label">Samousa</div></div>
+      <div class="menu-triple-image" onclick="openImgModal(6)" style="background-image: url('img/menu-side-grape.jpg');"><div class="image-menu-label">Grape Vine Roll</div></div>
+      <div class="menu-triple-image" onclick="openImgModal(7)" style="background-image: url('img/menu-side-salads.jpg');"><div class="image-menu-label">Chickpea Salad and Tabouli Salad</div></div>
+    </div>
+  </div>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$3.00</span>Spinach Pie</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$3.00</span>Cheese Pie</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Leek Roll</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Chicken Samousa</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Beef Samousa</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Vegetarian Samousa <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Grape Vine Roll <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Hummus</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.00</span>Stuffed Eggplant <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.00</span>Stuffed Pepper <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Falafel Ball <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Curried Potatoes <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Curried Rice <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Fresh Cut Fries <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Lentil Soup <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Chickpea Salad <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Tabouli Salad <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Mediterranean Salad</h4>
+
+      <hr class="menu-hr">
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-combos" class="well">
+  <h5 class="menu-section-title text-center">Combos</h5>
+  <p class="menu-section-desc text-center">*Combos include a sandwich with your choice of <a href="#" data-toggle="tooltip" data-placement="bottom" title="lettuce, tomato, red onions, tabouli salad, white turnip, red cabbage, beets, green peppers, hot banana peppers, and cucumbers">toppings</a> and <a href="#" data-toggle="tooltip" data-placement="bottom" title="tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce">sauces</a> a beverage and a soup or salad.</p>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>1. East Coast Donair</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>2. Chicken Shawarma</h4>
+
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>3. Beef Shawarma</h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$15.00</span>4. Lamb Shawarma</h4>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>5. Chicken Breast Kebab</h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>6. Veal Liver</h4>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>7. Kefta Burger</h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$13.00</span>8. Falafel <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+
+      <div class="row top-clear-sm">
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>9. Vegetarian <div class="vegan-icon"></div></h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$15.00</span>10. Fish Filet</h4>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>11. Breakfast</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="menu-desserts" class="well">
+  <h5 class="menu-section-title text-center">Desserts</h5>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="menu-double-image" onclick="openImgModal(10)" style="background-image: url('img/menu-desserts-almond.jpg');"><div class="image-menu-label">Almond Cookie</div></div>
+      <div class="menu-double-image" onclick="openImgModal(11)" style="background-image: url('img/menu-desserts-baklava.jpg');"><div class="image-menu-label">Baklava</div></div>
+    </div>
+  </div>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$3.00</span>Rice Pudding</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$3.50</span>Triangle Baklava</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Finger Baklava</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Almond Cookie <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Honey Nut Cookie</h4>
+
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Almond Cake <div class="vegan-icon"></div></h4>
+
+      <hr class="menu-hr">
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-vegan" class="well">
+  <h5 class="menu-section-title text-center">Vegan</h5>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="menu-double-image" onclick="openImgModal(8)" style="background-image: url('img/menu-side-falafel.jpg');"><div class="image-menu-label">Falafel Ball</div></div>
+      <div class="menu-double-image" onclick="openImgModal(9)" style="background-image: url('img/menu-side-stuffed.jpg');"><div class="image-menu-label">Stuffed Pepper</div></div>
+    </div>
+  </div>
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.50</span>Falafel Sandwich <div class="vegan-icon"></div></h4>
+      <p class="food-desc">White or whole wheat pita - filled with 3 falafel balls & toppings of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$8.50</span>Vegetarian Sandwich <div class="vegan-icon"></div></h4>
+      <p class="food-desc">White or whole wheat pita - filled with a stuffed eggplant & toppings of your choice</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$13.00</span>Falafel Plate <div class="vegan-icon"></div></h4>
+      <p class="food-desc">Rice and potatoes - with 3 falafel balls & toppings and sides of your choice</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>Vegetarian Plate <div class="vegan-icon"></div></h4>
+      <p class="food-desc">Rice and potatoes - with a stuffed eggplant & toppings and sides of your choice</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$13.00</span>Falafel Combo <div class="vegan-icon"></div></h4>
+      <p class="food-desc">Falafel sandwich with your choice lentil soup or salad</p>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$14.00</span>Vegetarian Combo <div class="vegan-icon"></div></h4>
+      <p class="food-desc">Vegetarian sandwich with your choice lentil soup or salad</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$2.00</span>Vegetarian Samousa <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Grape Vine Roll <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.00</span>Stuffed Eggplant <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$7.00</span>Stuffed Pepper <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$1.50</span>Falafel Ball <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Curried Potatoes <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Curried Rice <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Fresh Cut Fries <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$5.00</span>Lentil Soup <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Chickpea Salad <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Tabouli Salad <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+      <h4 class="media-heading text-uppercase text-left"><span class="text-right float-right price">$6.00</span>Mediterranean Salad <div class="vegan-icon"></div></h4>
+      <hr class="menu-hr">
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-plates" class="well">
+  <div class="row top-clear-sm">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+      <h4 class="media-heading text-uppercase text-left">Sides</h4>
+      <p class="food-desc">Rice with mixed vegetables (corn, carrot, and peas), chickpea salad, and curried potatoes</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left">Toppings</h4>
+      <p class="food-desc">Lettuce, tomato, red onions, tabouli salad, white turnip, red cabbage, beets, green peppers, hot banana peppers, and cucumbers</p>
+      <hr class="menu-hr">
+
+      <h4 class="media-heading text-uppercase text-left">Sauces</h4>
+      <p class="food-desc">Tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce</p>
+      <hr class="menu-hr">
+
+      <p class="food-desc"><div class="vegan-icon"></div> green leaf indicates vegan items</p>
+
+    </div>
+  </div>
+</div>
+
+<div id="menu-fixed">
+
+  <div class="row">
+    <div id="menu-fixed-info" class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <p id="sides-menu-update" class="menu-fixed-text"><strong>Sides:</strong> rice with mixed vegetables (corn, carrot, and peas), chickpea salad, and curried potatoes</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <p id="toppings-menu-update" class="menu-fixed-text"><strong>Toppings:</strong> lettuce, tomato, red onions, tabouli salad, white turnip, red cabbage, beets, green peppers, hot banana peppers, and cucumbers</p>
+      </div>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <p id="sauces-menu-update" class="menu-fixed-text"><strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce</p>
+      </div>
+    </div>
+  </div>
+
+</div>
