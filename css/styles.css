@@ -709,7 +709,8 @@ address {
 }
 
 .text-about-us {
-  font-size: 1.25em;
+  font-size: 3vmin;
+  font-weight: 100;
 }
 
 .section-about-us {
