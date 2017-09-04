@@ -183,8 +183,12 @@ h2 {
   background-color: rgba(0,0,0,0);
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .thumbnail > .showcase, .thumbnail a > .showcase {
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 .caption h3 {
@@ -207,8 +211,8 @@ h2 {
   color: black;
 }
 
-.circle-desc {
-  margin-bottom: 25px;
+.circle-desc, .circle-desc p {
+  margin-bottom: 0px;
 }
 
 #site-footer {

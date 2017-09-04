@@ -51,22 +51,7 @@ $(document).scroll(function () {
           "<strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce"
         );
     }
-    // Side Dishes 2110
-    // if (y > 2110 && y < 3170) {
-    //   $('#menu-fixed').fadeOut();
-    // }
-    // // Combos 3170
-    // if (y > 3170 && y < 3850) {
-    //   $('#menu-fixed').fadeOut();
-    // }
-    // // Desserts 3890
-    // if (y > 3850 && y < 4400) {
-    //   $('#menu-fixed').fadeOut();
-    // }
-    // // Vegan 4440
-    // if (y > 4440) {
-    //   $('#menu-fixed').fadeOut();
-    // }
+
     if (y > 2110) {
        $('#menu-fixed').fadeOut();
     }
