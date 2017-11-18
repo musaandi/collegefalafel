@@ -8,32 +8,14 @@
   </div>
 </div>
 
-<div id="" class="row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="well">
-      <h5>Make A Catering Request</h5>
-      <form method="POST" action="http://collegefalafel.com/api/v1/mailer.php">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <input type="text" placeholder="Enter Your Name" name="name" id="input" class="form-control" value="" required="required">
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <input type="email" placeholder="Enter Your Email" name="email" id="input" class="form-control" value="" required="required">
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-          <input type="tel" placeholder="Enter Your Phone Number" name="phone" id="input" class="form-control" value="" required="required">
-        </div>
-      </div>
-      <div class="row top-clear-sm">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <textarea placeholder="Enter Message (optional)" name="message" id="input" class="form-control" rows="3" required="required"></textarea>
-        </div>
-      </div>
-      <input type="text" value="catering" name="type" style="display: none;">
-      <input type="submit" class="top-clear-sm btn btn-primary btn-lg"></input>
-      </form>
-    </div>
-  </div>
+
+<h3 ng-click="toggleFromFilterList('hot')">HOT</h3>
+<h3 ng-click="toggleFromFilterList('cold')">COLD</h3>
+<h3 ng-click="toggleFromFilterList('vege')">VEGE</h3>
+<h3 ng-click="toggleFromFilterList('meat')">MEAT</h3>
+
+<div ng-repeat="item in menu | filter:tag">
+  <p>{{item.name}} | {{item.desc}} | {{item.price}}</p>
 </div>
 
 <h2>Gallery</h2>
