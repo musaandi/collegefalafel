@@ -726,6 +726,154 @@ address {
   padding: 10px;
 }
 
+.catering-option-button {
+  font-size: 1.3em;
+  padding: 10px 15px 10px 15px;
+  margin: 20px;
+  color: white;
+  font-weight: bold;
+  background-color: #d82927;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#build-platters, #premade-platters {
+  /*margin-top: 20px;*/
+}
+
+.premade-platter-display {
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+  min-height: 230px;
+}
+
+.premade-platter-add-button {
+  padding: 5px 10px 5px 10px;
+  margin-top: 5px;
+  background-color: #d92a28;
+  display: inline-block;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.premade-platter-add-button:hover {
+  opacity: 0.7;
+}
+
+.premade-platter-add-button:active {
+  opacity: 0.3;
+}
+
+.platter-desc {
+  font-size: 1em;
+  margin-bottom: 0px;
+}
+
+.platter-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+
+.platter-price {
+  color: #d92a27;
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-bottom: 0px;
+}
+
+.catering-option-button:hover {
+  opacity: 0.5;
+}
+
+#order-summary {
+  min-height: 300px;
+  border: 2px solid #d92a28;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.order-summary-header {
+  font-size: 1.3em;
+  margin-top: 10px;
+  border-bottom: 1px solid #d8cec6;
+}
+
+.order-detail-input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px !important;
+}
+
+.remove-from-order-button {
+  background-color: #d92a28;
+  display: inline-block;
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.edit-from-order-button {
+  background-color: #178E49;
+  display: inline-block;
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.remove-from-order-button:hover, .edit-from-order-button:hover {
+  opacity: 0.8;
+}
+
+.order-summary-platters {
+  margin-bottom: 10px;
+}
+
+.special-request-input {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.special-request {
+  margin: 10px;
+}
+
+#totals {
+  border-top: 1px solid #d8cec6;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.total-price {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.item-content {
+  margin-bottom: 0px;
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .modal-content {

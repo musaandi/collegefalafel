@@ -1,31 +1,173 @@
+<style type="text/css">
+
+  .special-request {
+    width: 100%;
+  }
+
+  .custom-field {
+    font-size: 1.3em !important;
+    padding: 10px !important;
+    width: 100%;
+  }
+
+  .custom-item {
+    font-size: 1.3em;
+  }
+
+  .custom-button {
+    float: right;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+  }
+
+  #custom-platter {
+    font-size: 1.3em;
+  }
+
+  .custom-final-item {
+    cursor: pointer;
+  }
+
+  .custom-final-item:hover {
+    color: ;
+  }
+
+  .custom-total-header {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .clickable:hover {
+    color: #D32423;
+  }
+
+  .total-price {
+    margin-bottom: 0px;
+  }
+
+  .clear-bottom {
+    margin-bottom: 10px;
+  }
+
+</style>
+
 <h2>Catering</h2>
 
 <div class="row">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
   <p>Catering at College Falafel is simple. We offer two types of catering packages; a large order of our typical menu items or customized platters. Platters range from completely vegetarian, to a meat lover’s buffet, all the way to a platter full of our unique desserts and everything in between.</p>
-  <p>To place an order please call us at (416) 532-8698 or fill out the contact form below.</p>
+  <p>To place an order please call us at (416) 532-8698 or fill out the custom order form below. All payment information is confirmed and processed over the phone.</p>
+
+  <h4 class="clickable" ng-click="faq = !faq" ng-show="!faq">Show Frequently Asked Questions</h4>
+  <h4 class="clickable" ng-click="faq = !faq" ng-show="faq">Hide Frequently Asked Questions</h4>
+
+  <div ng-show="faq">
+    <p><strong>When are you closed or unable to fulfill catering orders?</strong></p>
+    <p>Sunday</p>
+
+    <p><strong>What is your earliest pickup time on weekdays?</strong></p>
+    <p>11:00am</p>
+
+    <p><strong>When is your latest pickup time on weekdays?</strong></p>
+    <p>10:00pm</p>
+
+    <p><strong>When is your busy time when you do not want orders picked up?</strong></p>
+    <p>12:00pm - 12:30pm</p>
+
+    <p><strong>When picking up an order, which side of the store should we come to and is there parking?</strong></p>
+    <p>Pick up in front of the store and you can park across the street.</p>
+
+    <p><strong>Are you able to accept same day orders?</strong></p>
+    <p>Yes</p>
+
+    <p><strong>What is the maximum capacity for a same-day order with 2 hours notice?</strong></p>
+    <p>50 meals</p>
+
+    <p><strong>What is the minimum number of hours you need to fulfill a same-day order?</strong></p>
+    <p>2</p>
+
+    <p><strong>What is the maximum meal capacity for catering orders with minimum 3+ days notice?</strong></p>
+    <p>500 meals</p>
+
+    <p><strong>What kind of dietary accomodations do you provide?</strong></p>
+    <p>We have halal options, vegetarian options, vegan options, gluten-free options and dairy-free options.</p>
+  </div>
+
   </div>
 </div>
 
-<h3 ng-click="toggleFromFilterList('hot')">HOT</h3>
-<h3 ng-click="toggleFromFilterList('cold')">COLD</h3>
-<h3 ng-click="toggleFromFilterList('vege')">VEGE</h3>
-<h3 ng-click="toggleFromFilterList('meat')">MEAT</h3>
-
-<div ng-repeat="item in menu | filter:tag">
-  <p ng-click="addToOrder(item)">{{item.name}} | {{item.desc}} | {{item.price}}</p>
+<div class="row">
+  <h3 class="text-center">Select an option to construct your catering request</h3 class="text-center">
+  <div class="text-center col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div ng-click="showPremade = true; showBuild = false" class="catering-option-button">Choose from some of our favourite premade platters</div>
+  </div>
+  <div class="text-center col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <div ng-click="showPremade = false; showBuild = true" class="catering-option-button">Build your own custom platter with selection across all of our menu items</div>
+  </div>
 </div>
 
-<div>
-  <h4>Order</h4>
-  <ul>
-    <li ng-repeat="item in order.items" ng-click="removeFromOrder(item.id)">{{item.name}}</li>
-  </ul>
-  <h3>Subtotal: {{ order.subTotal }}</h3>
-  <h3>HST: 13%</h3>
-  <h3>Total: {{ order.total }}</h3>
-</div>
+<div class="row">
+  <div id="order-summary" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <p class="order-summary-header">Order Details</p>
+    <input ng-model="orderSummary.name" class="order-detail-input" type="text" placeholder="Enter your name">
+    <input ng-model="orderSummary.phone" class="order-detail-input" type="number" placeholder="Enter your phone number">
+    <input ng-model="orderSummary.email" class="order-detail-input" type="email" placeholder="Enter your email">
+    <textarea ng-model="orderSummary.specialRequest" rows="3" class="order-detail-input" placeholder="Add any special requests or specify allergies/dietary restrictions"></textarea>
+    <p class="order-summary-header">Order Summary</p>
+    <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
+      <p class="item-content"><strong>${{item.price}} - {{item.name}}:</strong> {{item.desc}}</p>
+      <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
+      <div class="remove-from-order-button" ng-click="removeFromOrder(item.id)">Remove</div>
+      <div class="edit-from-order-button" ng-click="item.edit = !item.edit">Edit</div>
+      <br>
+      <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Add special request"></textarea>
+    </div>
+    <div id="totals">
+      <p class="total-price">Total: ${{orderSummary.total}}</p>
+      <div class="premade-platter-add-button clear-bottom" ng-click="submitOrder()">Submit Order</div>
+    </div>
+  </div>
+  <div id="premade-platters" ng-show="showPremade" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <h3 class="text-center">Premade Platters</h3>
+    <p class="text-center">Choose from some of our most popular premade platters including meat platters, vegetarian platters, and dessert platters.</p>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <p class="platter-name">{{platter.name}}</p>
+        <p class="platter-desc">{{platter.desc}}</p>
+        <p class="platter-price">${{platter.price}}</p>
+        <div class="premade-platter-add-button" ng-click="addPlatter(platter)">+ Add to order</div>
+      </div>
+    </div>
+  </div>
+  <div id="build-platters" ng-show="showBuild" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    <h3 class="text-center">Build Your Own Platter</h3>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h4>Name:</h4>
+      <input class="custom-field" type="text" ng-model="custom.name" placeholder="Enter name">
+      <h4>Special Requests:</h4>
+      <input class="custom-field" type="text" ng-model="custom.specialRequest" placeholder="Enter any special requests (allergies, dietary restrictions)">
+      <div class="col-md-5"><h5>Your Platter (click to remove):</h5></div>
+      <div class="col-md-7"><h5>Menu Items (single servings):</h5></div>
 
+      <div id="custom-platter" class="col-md-5">
+        <p class="custom-total-header">Total: ${{custom.price}}</p>
+        <ul>
+          <li class="custom-final-item" ng-click="removeFromCustomPlatter(item.id)" ng-repeat="item in custom.items">{{item.name}}</li>
+        </ul>
+        <div class="premade-platter-add-button" ng-click="confirmAndAddToOrder(custom)">+ Confirm and add to order</div>
+      </div>
+      <div class="col-md-7">
+        <ul class="list-group">
+          <li class="list-group-item custom-item" ng-repeat="item in items"><strong>${{item.price}}</strong> - {{item.name}}<div class="premade-platter-add-button custom-button" ng-click="addToCustomPlatter(item)">+ Add to platter</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <h2>Gallery</h2>
 
