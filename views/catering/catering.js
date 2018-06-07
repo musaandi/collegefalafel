@@ -170,15 +170,18 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.removeFromOrder = function(id) {
     if (confirm("Are you sure you want to remove the item from your order?")) {
       var toDelete = null;
+      var name;
       $scope.orderSummary.items.forEach(function(item, index){
         if (item.id === id) {
           toDelete = index;
         }
       });
       if (toDelete !== null) {
+        name = $scope.orderSummary.items[toDelete].name;
         $scope.orderSummary.items.splice(toDelete, 1);
       }
       $scope.updateTotals();
+      $scope.updateQuantities(name);
     }
   }
 
@@ -188,6 +191,20 @@ angular.module('myApp.catering', ['ngRoute'])
       total += item.price;
     });
     $scope.orderSummary.total = total;
+  }
+
+  $scope.updateQuantities = function(name) {
+    var counter = 0;
+    $scope.orderSummary.items.forEach(function(item){
+      if (item.name == name) {
+        counter++;
+      }
+    })
+    $scope.premadePlatters.forEach(function(item){
+      if (item.name == name) {
+        item.quantity = counter;
+      }
+    })
   }
 
   $scope.addPlatter = function(platter) {
@@ -201,6 +218,21 @@ angular.module('myApp.catering', ['ngRoute'])
     }
     $scope.orderSummary.items.push(obj);
     $scope.updateTotals();
+    $scope.updateQuantities(platter.name);
+  }
+
+  $scope.removePlatter = function(name) {
+    var toDelete = null;
+    $scope.orderSummary.items.forEach(function(item, index){
+      if (item.name === name) {
+        toDelete = index;
+      }
+    });
+    if (toDelete !== null) {
+      $scope.orderSummary.items.splice(toDelete, 1);
+    }
+    $scope.updateTotals();
+    $scope.updateQuantities(name);
   }
 
   $scope.confirmAndAddToOrder = function(customPlatter) {
@@ -231,51 +263,61 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Chicken Platter",
       desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
       price: 16,
+      quantity: 0
     },
     {
       name: "Beef Platter",
       desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
       price: 17,
+      quantity: 0
     },
     {
       name: "Donair Platter",
       desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
       price: 17,
+      quantity: 0
     },
     {
       name: "Lamb Platter",
       desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
       price: 18,
+      quantity: 0
     },
     {
       name: "Vegetarian Falafel Platter",
       desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
       price: 16.50,
+      quantity: 0
     },
     {
       name: "Vegetarian Stuffed Eggplant Platter",
       desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
       price: 19,
+      quantity: 0
     },
     {
       name: "Vegetarian Stuffed Pepper Platter",
       desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
       price: 19,
+      quantity: 0
     },
     {
       name: "Assorted Dessert Platter",
       desc: "Includes 2 finger baklava, 1 triangle baklava, 2 cookies and 1 almond cake",
       price: 15.50,
+      quantity: 0
     },
     {
       name: "Finger Baklava Dessert Platter",
       desc: "Includes 5 finger baklava",
       price: 10,
+      quantity: 0
     },
     {
       name: "Triangle Baklava Dessert Platter",
       desc: "Includes finger baklava, triangle baklava, cookies, almond cake, rice pudding",
       price: 17.50,
+      quantity: 0
     },
   ];
 

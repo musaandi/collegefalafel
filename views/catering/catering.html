@@ -61,6 +61,35 @@
     width: 100%;
   }
 
+  .premade-platter-plus, .premade-platter-minus, .premade-platter-quantity {
+    padding: 5px 10px 5px 10px;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+  .premade-platter-plus:active, .premade-platter-minus:active, .premade-platter-quantity:active {
+    opacity: 0.5;
+  }
+
+  .premade-platter-plus {
+    color: white;
+    background: #178E49;
+  }
+
+  .premade-platter-minus {
+    color: white;
+    background: #d92a28;
+  }
+
+  .premade-platter-quantity {
+    color: #d92a28;
+    border: 1px solid #d92a28;
+  }
+
 </style>
 
 <h2>Catering</h2>
@@ -145,11 +174,11 @@
         </tr>
         <tr>
           <td>HST (13%):</td>
-          <td>${{orderSummary.total * 0.13}}</td>
+          <td>${{(orderSummary.total * 0.13).toFixed(2)}}</td>
         </tr>
         <tr>
           <td><strong>Total:</strong></td>
-          <td><strong>${{orderSummary.total + (orderSummary.total * 0.13)}}</strong></td>
+          <td><strong>${{(orderSummary.total * 1.13).toFixed(2)}}</strong></td>
         </tr>
       </table>
       <div class="premade-platter-add-button clear-bottom" ng-click="submitOrder()">Submit Order</div>
@@ -163,7 +192,13 @@
         <p class="platter-name">{{platter.name}}</p>
         <p class="platter-desc">{{platter.desc}}</p>
         <p class="platter-price">${{platter.price}}</p>
-        <div class="premade-platter-add-button" ng-click="addPlatter(platter)">+ Add to order</div>
+        <div class="premade-platter-plus" ng-click="addPlatter(platter)">
+          <i class="fa fa-plus"></i>
+        </div>
+        <div class="premade-platter-minus" ng-click="removePlatter(platter.name)">
+          <i class="fa fa-minus"></i>
+        </div>
+        <div class="premade-platter-quantity">{{platter.quantity}}</div>
       </div>
     </div>
   </div>
