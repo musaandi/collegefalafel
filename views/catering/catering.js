@@ -15,8 +15,7 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.filterList = [];
   $scope.faq = false;
 
-  $scope.showPremade = true;
-  $scope.showBuild = false;
+  $scope.showSection = 'bulk';
 
   $scope.custom = {
     name: "Custom Platter",
