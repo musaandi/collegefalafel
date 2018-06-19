@@ -24,14 +24,6 @@
     font-size: 1.3em;
   }
 
-  .custom-final-item {
-    cursor: pointer;
-  }
-
-  .custom-final-item:hover {
-    color: ;
-  }
-
   .custom-total-header {
     font-weight: bold;
     margin: 0;
@@ -88,6 +80,42 @@
   .premade-platter-quantity {
     color: #d92a28;
     border: 1px solid #d92a28;
+  }
+
+  .platter-category-btns {
+    width: 100%;
+  }
+
+  .platter-category-btn {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #DF635B;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #DF635B;
+  }
+
+  .platter-category-selected {
+    background-color: #DF635B;
+    color: white;
+  }
+
+  .custom-platter-items {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .custom-final-item {
+    padding: 5px 5px 5px 10px;
+    background-color: white;
+  }
+
+  .custom-final-item-removal {
+    float: right;
+    margin: 5px;
+    cursor: pointer;
   }
 
 </style>
@@ -214,14 +242,22 @@
 
       <div id="custom-platter" class="col-md-5">
         <p class="custom-total-header">Total: ${{custom.price}}</p>
-        <ul>
-          <li class="custom-final-item" ng-click="removeFromCustomPlatter(item.id)" ng-repeat="item in custom.items">{{item.name}}</li>
-        </ul>
+        <div class="custom-platter-items">
+          <div class="custom-final-item" ng-repeat="item in custom.items">
+            {{item.name}}
+            <i class="fa fa-remove custom-final-item-removal" ng-click="removeFromCustomPlatter(item.id)"></i>
+          </div>
+        </div>
         <div class="premade-platter-add-button" ng-click="confirmAndAddToOrder(custom)">+ Confirm and add to order</div>
       </div>
       <div class="col-md-7">
+        <div class="platter-category-btns">
+          <div class="platter-category-btn" ng-click="platterCategory = 'protein'" ng-class="{'platter-category-selected': platterCategory == 'protein'}">Protein</div>
+          <div class="platter-category-btn" ng-click="platterCategory = 'sides'" ng-class="{'platter-category-selected': platterCategory == 'sides'}">Sides</div>
+          <div class="platter-category-btn" ng-click="platterCategory = 'desserts'" ng-class="{'platter-category-selected': platterCategory == 'desserts'}">Desserts</div>
+        </div>
         <ul class="list-group">
-          <li class="list-group-item custom-item" ng-repeat="item in items"><strong>${{item.price}}</strong> - {{item.name}}<div class="premade-platter-add-button custom-button" ng-click="addToCustomPlatter(item)">+ Add to platter</div></li>
+          <li class="list-group-item custom-item" ng-repeat="item in items" ng-show="item.category == platterCategory"><strong>${{item.price}}</strong> - {{item.name}}<div class="premade-platter-add-button custom-button" ng-click="addToCustomPlatter(item)">+ Add to platter</div></li>
         </ul>
       </div>
     </div>

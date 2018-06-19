@@ -14,8 +14,9 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.tags = "";
   $scope.filterList = [];
   $scope.faq = false;
+  $scope.platterCategory = "protein";
 
-  $scope.showSection = 'bulk';
+  $scope.showSection = 'custom';
 
   $scope.custom = {
     name: "Custom Platter",
@@ -25,21 +26,21 @@ angular.module('myApp.catering', ['ngRoute'])
   };
 
   $scope.items = [
-    { name: "meat: chicken", price: 6 },
-    { name: "meat: beef", price: 7 },
-    { name: "meat: donair", price: 7 },
-    { name: "meat: lamb", price: 8 },
-    { name: "veg: 3 falafel balls", price: 4.50 },
-    { name: "veg: stuffed eggplant", price: 7 },
-    { name: "veg: stuffed pepper", price: 7 },
-    { name: "pita", price: 1 },
-    { name: "salads", price: 6 },
-    { name: "dips (hummus, tzatziki/garlic dip, tahini, hot sauce)", price: 3 },
-    { name: "samousa", price: 2 },
-    { name: "2 finger baklava", price: 4 },
-    { name: "1 triangle", price: 3.50 },
-    { name: "2 cookies", price: 3 },
-    { name: "1 almond cake", price: 2 }
+    { category: "protein", name: "meat: chicken", price: 6 },
+    { category: "protein", name: "meat: beef", price: 7 },
+    { category: "protein", name: "meat: donair", price: 7 },
+    { category: "protein", name: "meat: lamb", price: 8 },
+    { category: "protein", name: "veg: 3 falafel balls", price: 4.50 },
+    { category: "protein", name: "veg: stuffed eggplant", price: 7 },
+    { category: "protein", name: "veg: stuffed pepper", price: 7 },
+    { category: "sides", name: "pita", price: 1 },
+    { category: "sides", name: "salads", price: 6 },
+    { category: "sides", name: "dips (hummus, tzatziki/garlic dip, tahini, hot sauce)", price: 3 },
+    { category: "sides", name: "samousa", price: 2 },
+    { category: "desserts", name: "2 finger baklava", price: 4 },
+    { category: "desserts", name: "1 triangle", price: 3.50 },
+    { category: "desserts", name: "2 cookies", price: 3 },
+    { category: "desserts", name: "1 almond cake", price: 2 }
   ]
 
   $scope.toggleFromFilterList = function(name) {
