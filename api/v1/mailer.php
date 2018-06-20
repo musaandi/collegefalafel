@@ -5,16 +5,6 @@ if (isset($_POST)) {
   $to = "info@collegefalafel.com";
   $subject = "Request: ".$_POST['type'];
 
-  // var payload = {
-  //   name: $scope.orderSummary.name,
-  //   phone: $scope.orderSummary.phone,
-  //   email: $scope.orderSummary.email,
-  //   details: details,
-  //   total: $scope.orderSummary.total,
-  //   timestamp: timestamp.toString(),
-  //   orderId: generateOrderId(timestamp)
-  // }
-
   $message = "
   <html>
   <head>
@@ -34,12 +24,11 @@ if (isset($_POST)) {
   <td>".$_POST['phone']."</td>
   </tr>
   </table>
-  <p>Order ID:</p>
-  <p>".$_POST['orderId']."</p>
-  <p>Time of submission:</p>
-  <p>".$_POST['timestamp']."</p>
-  <p>Total:</p>
-  <p>$".$_POST['total']."</p>
+  <p>Order ID: ".$_POST['orderId']."</p>
+  <p>Time of submission: ".$_POST['timestamp']."</p>
+  <p>Subtotal: $".$_POST['subtotal']."</p>
+  <p>HST (13%): $".$_POST['tax']."</p>
+  <p>Total: $".$_POST['total']."</p>
   <p>Order Details:</p>
   <p>".$_POST['details']."</p>
   </body>
@@ -60,8 +49,6 @@ if (isset($_POST)) {
 <html>
 <head>
   <title>Redirecting...</title>
-  <link rel="stylesheet" href="http://apps.phrakture.com/cfstaging/css/bootstrap.css">
-  <link rel="stylesheet" href="http://apps.phrakture.com/cfstaging/css/styles.css">
 </head>
 <body>
 <?php

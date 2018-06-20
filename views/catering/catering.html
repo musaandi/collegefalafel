@@ -91,14 +91,14 @@
     padding: 5px 10px 5px 10px;
     margin-right: 5px;
     margin-bottom: 10px;
-    border: 1px solid #DF635B;
+    border: 1px solid #D32423;
     border-radius: 5px;
     cursor: pointer;
-    color: #DF635B;
+    color: #D32423;
   }
 
   .platter-category-selected {
-    background-color: #DF635B;
+    background-color: #D32423;
     color: white;
   }
 
@@ -116,6 +116,37 @@
     float: right;
     margin: 5px;
     cursor: pointer;
+  }
+
+  .bulk-item {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .add-bulk-item, .remove-bulk-item, .bulk-item-quantity {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 7px 0px 7px;
+    border-radius: 5px;
+  }
+
+  .add-bulk-item:active, .remove-bulk-item:active {
+    opacity: 0.5;
+  }
+
+  .add-bulk-item {
+    background-color: #178340;
+    color: white;
+  }
+
+  .remove-bulk-item {
+    background-color: #D32423;
+    color: white;
+  }
+
+  .bulk-item-quantity {
+    border: 1px solid #D32423;
+    color: #D32423;
   }
 
 </style>
@@ -181,16 +212,23 @@
 <div class="row">
   <div id="order-summary" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <p class="order-summary-header">Order Details</p>
-    <input ng-model="orderSummary.name" class="order-detail-input" type="text" placeholder="Enter your name">
-    <input ng-model="orderSummary.phone" class="order-detail-input" type="number" placeholder="Enter your phone number">
-    <input ng-model="orderSummary.email" class="order-detail-input" type="email" placeholder="Enter your email">
-    <textarea ng-model="orderSummary.specialRequest" rows="3" class="order-detail-input" placeholder="Add any special requests or specify allergies/dietary restrictions"></textarea>
+    <input ng-model="orderSummary.name" class="order-detail-input" type="text" placeholder="Enter your name" ng-blur="saveData()">
+    <input ng-model="orderSummary.phone" class="order-detail-input" type="number" placeholder="Enter your phone number" ng-blur="saveData()">
+    <input ng-model="orderSummary.email" class="order-detail-input" type="email" placeholder="Enter your email" ng-blur="saveData()">
+    <textarea ng-model="orderSummary.specialRequest" rows="3" class="order-detail-input" placeholder="Add any special requests or specify allergies/dietary restrictions" ng-blur="saveData()"></textarea>
     <p class="order-summary-header">Order Summary</p>
     <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
-      <p class="item-content"><strong>${{item.price}} - {{item.name}}:</strong> {{item.desc}}</p>
+      <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
       <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
-      <div class="remove-from-order-button" ng-click="removeFromOrder(item.id)">Remove</div>
-      <div class="edit-from-order-button" ng-click="item.edit = !item.edit">Edit</div>
+      <div class="edit-from-order-button" ng-click="item.edit = !item.edit; saveData();">
+        <i class="fa fa-edit"></i>
+      </div>
+      <div class="remove-from-order-button" ng-click="reduceFromOrder(item.name, item.desc)">
+        <i class="fa fa-minus"></i>
+      </div>
+      <div class="remove-from-order-button" ng-click="removeFromOrder(item.id)">
+        <i class="fa fa-close"></i>
+      </div>
       <br>
       <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Add special request"></textarea>
     </div>
@@ -210,6 +248,7 @@
         </tr>
       </table>
       <div class="premade-platter-add-button clear-bottom" ng-click="submitOrder()">Submit Order</div>
+      <div class="premade-platter-add-button clear-bottom" ng-click="resetOrder()">Clear</div>
     </div>
   </div>
   <div id="premade-platters" ng-show="showSection == 'premade'" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
@@ -223,7 +262,7 @@
         <div class="premade-platter-plus" ng-click="addPlatter(platter)">
           <i class="fa fa-plus"></i>
         </div>
-        <div class="premade-platter-minus" ng-click="removePlatter(platter.name)">
+        <div class="premade-platter-minus" ng-click="reduceFromOrder(platter.name, platter.desc)">
           <i class="fa fa-minus"></i>
         </div>
         <div class="premade-platter-quantity">{{platter.quantity}}</div>
@@ -248,7 +287,8 @@
             <i class="fa fa-remove custom-final-item-removal" ng-click="removeFromCustomPlatter(item.id)"></i>
           </div>
         </div>
-        <div class="premade-platter-add-button" ng-click="confirmAndAddToOrder(custom)">+ Confirm and add to order</div>
+        <div class="premade-platter-add-button" ng-click="confirmAndAddToOrder(custom)"><i class="fa fa-plus"></i> Confirm and add to order</div>
+        <div class="premade-platter-new-button" ng-click="resetCustomPlatter()"><i class="fa fa-refresh"></i> Clear and create new platter</div>
       </div>
       <div class="col-md-7">
         <div class="platter-category-btns">
@@ -265,14 +305,26 @@
   <div id="bulk-menu-items" ng-show="showSection == 'bulk'" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
     <h3 class="text-center">Bulk Menu Items</h3>
     <p class="text-center">Choose from our regular menu items</p>
-<!--     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <p class="platter-name">{{platter.name}}</p>
-        <p class="platter-desc">{{platter.desc}}</p>
-        <p class="platter-price">${{platter.price}}</p>
-        <div class="premade-platter-add-button" ng-click="addPlatter(platter)">+ Add to order</div>
+    <div class="platter-category-btns">
+      <div class="platter-category-btn" ng-click="bulkItemFilter = 'sandwiches'" ng-class="{'platter-category-selected': bulkItemFilter == 'sandwiches'}">Sandwiches</div>
+      <div class="platter-category-btn" ng-click="bulkItemFilter = 'plates'" ng-class="{'platter-category-selected': bulkItemFilter == 'plates'}">Plates</div>
+      <div class="platter-category-btn" ng-click="bulkItemFilter = 'sides'" ng-class="{'platter-category-selected': bulkItemFilter == 'sides'}">Sides</div>
+      <div class="platter-category-btn" ng-click="bulkItemFilter = 'desserts'" ng-class="{'platter-category-selected': bulkItemFilter == 'desserts'}">Desserts</div>
+      <div class="platter-category-btn" ng-click="bulkItemFilter = 'drinks'" ng-class="{'platter-category-selected': bulkItemFilter == 'drinks'}">Drinks</div>
+    </div>
+    <div ng-repeat="bulkItem in bulkItems" ng-show="bulkItem.category == bulkItemFilter" class="bulk-item col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      ${{bulkItem.price}} - <strong>{{bulkItem.name}}</strong>
+      <br>
+      <div class="add-bulk-item" ng-click="addBulkItem(bulkItem)">
+        <i class="fa fa-plus"></i>
       </div>
-    </div> -->
+      <div class="remove-bulk-item" ng-click="removeBulkItem(bulkItem)">
+        <i class="fa fa-minus"></i>
+      </div>
+      <div class="bulk-item-quantity">
+        {{bulkItem.quantity}}
+      </div>
+    </div>
   </div>
 </div>
 

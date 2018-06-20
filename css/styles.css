@@ -750,7 +750,7 @@ address {
   min-height: 230px;
 }
 
-.premade-platter-add-button {
+.premade-platter-add-button, .premade-platter-new-button {
   padding: 5px 10px 5px 10px;
   margin-top: 5px;
   background-color: #d92a28;
@@ -761,11 +761,15 @@ address {
   cursor: pointer;
 }
 
-.premade-platter-add-button:hover {
+.premade-platter-new-button {
+  background-color: #0C843D;
+}
+
+.premade-platter-add-button:hover, .premade-platter-new-button:hover {
   opacity: 0.7;
 }
 
-.premade-platter-add-button:active {
+.premade-platter-add-button:active, .premade-platter-new-button:active {
   opacity: 0.3;
 }
 
