@@ -9,7 +9,7 @@ angular.module('myApp.catering', ['ngRoute'])
   });
 }])
 
-.controller('CateringCtrl', function($scope){
+.controller('CateringCtrl', ["$scope", "$http", function($scope, $http){
 
   $scope.tags = "";
   $scope.filterList = [];
@@ -22,6 +22,7 @@ angular.module('myApp.catering', ['ngRoute'])
     name: "Custom Platter",
     items: [],
     specialRequest: "",
+    serving: 1,
     price: 0
   };
 
@@ -120,33 +121,42 @@ angular.module('myApp.catering', ['ngRoute'])
       var timestamp = new Date();
 
       $scope.orderSummary.items.forEach(function(item){
-        details += "\n(x" + item.quantity + ") $" + item.price + " - " + item.name;
+        details += "(x" + item.quantity + ") $" + item.price + " - " + item.name;
         if (item.desc != "") {
           details += ": " + item.desc;
         }
         if (item.specialRequest) {
           details += " [ " + item.specialRequest + " ]";
         }
-        details += "\n-------";
+        details += "####";
       });
+
+      if ($scope.orderSummary.specialRequest == "") {
+        $scope.orderSummary.specialRequest = "No additional special requests.";
+      }
 
       var payload = {
         type: "catering",
         name: $scope.orderSummary.name,
         phone: $scope.orderSummary.phone,
         email: $scope.orderSummary.email,
+        specialRequest: $scope.orderSummary.specialRequest,
         details: details,
-        subtotal: $scope.orderSummary.total,
+        subtotal: Math.round($scope.orderSummary.total * 100) / 100,
         tax: Math.round($scope.orderSummary.total * 0.13 * 100) / 100,
         total: Math.round($scope.orderSummary.total * 1.13 * 100) / 100,
         timestamp: timestamp.toString(),
         orderId: generateOrderId(timestamp)
       }
 
-      // $http.post("http://collegefalafel.com/api/v1/mailer.php", payload);
-      alert("Thank you for submitting your order with orderId: '" + payload.orderId + "'. We will contact you shortly to confirm your order. All payment transactions are handled over the phone.")
-      $scope.resetOrder();
-      window.location.reload();
+      $http.post("http://collegefalafel.com/api/v1/mailer.php", payload)
+      .then(function(res){
+        alert("Thank you for submitting your order with orderId: '" + payload.orderId + "'. We will contact you shortly to confirm your order. All payment transactions are handled over the phone.")
+        $scope.resetOrder();
+        window.location.reload();
+      }, function(err){
+        alert("Could not submit order, there was an error reaching the server.");
+      });
     } else {
       alert("Could not submit order, you are missing some fields.");
     }
@@ -301,8 +311,8 @@ angular.module('myApp.catering', ['ngRoute'])
         var obj = {
           id: $scope.orderSummary.items.length + 1,
           name: customPlatter.name,
-          desc: customPlatter.desc,
-          price: customPlatter.price,
+          desc: customPlatter.desc + " for " + customPlatter.serving + " people",
+          price: customPlatter.price * customPlatter.serving,
           edit: false,
           quantity: 1,
           specialRequest: customPlatter.specialRequest
@@ -318,6 +328,7 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Custom Platter",
       items: [],
       specialRequest: "",
+      serving: 1,
       price: 0
     };
   }
@@ -325,62 +336,62 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.premadePlatters = [
     {
       name: "Chicken Platter",
-      desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
-      price: 16,
+      desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 128,
       quantity: 0
     },
     {
       name: "Beef Platter",
-      desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
-      price: 17,
+      desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 136,
       quantity: 0
     },
     {
       name: "Donair Platter",
-      desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
-      price: 17,
+      desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 136,
       quantity: 0
     },
     {
       name: "Lamb Platter",
-      desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads",
-      price: 18,
+      desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 144,
       quantity: 0
     },
     {
       name: "Vegetarian Falafel Platter",
-      desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
-      price: 16.50,
+      desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 132,
       quantity: 0
     },
     {
       name: "Vegetarian Stuffed Eggplant Platter",
-      desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
-      price: 19,
+      desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 152,
       quantity: 0
     },
     {
       name: "Vegetarian Stuffed Pepper Platter",
-      desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, pita",
-      price: 19,
+      desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 152,
       quantity: 0
     },
     {
       name: "Assorted Dessert Platter",
-      desc: "Includes 2 finger baklava, 1 triangle baklava, 2 cookies and 1 almond cake",
-      price: 15.50,
+      desc: "Includes 2 finger baklava, 1 triangle baklava, 2 cookies and 1 almond cake for 8 people.",
+      price: 124,
       quantity: 0
     },
     {
       name: "Finger Baklava Dessert Platter",
       desc: "Includes 5 finger baklava",
-      price: 10,
+      price: 80,
       quantity: 0
     },
     {
       name: "Triangle Baklava Dessert Platter",
       desc: "Includes finger baklava, triangle baklava, cookies, almond cake, rice pudding",
-      price: 17.50,
+      price: 140,
       quantity: 0
     },
   ];
@@ -774,12 +785,89 @@ angular.module('myApp.catering', ['ngRoute'])
 
     // Drinks
     {
-      name: "Soft Drink",
+      name: "Mango Juice (Bottle)",
       desc: "",
       category: "drinks",
-      price: 1.5,
+      price: 3.29,
       quantity: 0
     },
+    {
+      name: "Water (Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Chocolate Milk (Small)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Chocolate Milk (Large)",
+      desc: "",
+      category: "drinks",
+      price: 2.89,
+      quantity: 0
+    },
+    {
+      name: "San Pellegrino (Can)",
+      desc: "",
+      category: "drinks",
+      price: 2.89,
+      quantity: 0
+    },
+    {
+      name: "Sumol (Can)",
+      desc: "",
+      category: "drinks",
+      price: 2.89,
+      quantity: 0
+    },
+    {
+      name: "Coca Cola (Can)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Diet Coke (Can)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Canada Dry (Can)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Nestea (Can)",
+      desc: "",
+      category: "drinks",
+      price: 2.20,
+      quantity: 0
+    },
+    {
+      name: "Sprite (Can)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    },
+    {
+      name: "Compal (Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 1.89,
+      quantity: 0
+    }
   ]
 
   $scope.updateAllQuantities = function() {
@@ -822,4 +910,4 @@ angular.module('myApp.catering', ['ngRoute'])
     }
   }
 
-});
+}]);

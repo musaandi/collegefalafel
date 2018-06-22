@@ -745,9 +745,7 @@ address {
 .premade-platter-display {
   padding: 15px;
   border-radius: 5px;
-  margin-bottom: 10px;
   display: inline-block;
-  min-height: 230px;
 }
 
 .premade-platter-add-button, .premade-platter-new-button {
@@ -797,7 +795,6 @@ address {
 
 #order-summary {
   min-height: 300px;
-  border: 2px solid #d92a28;
   border-radius: 5px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -869,9 +866,9 @@ address {
   margin-bottom: 0px;
 }
 
-input[type='number'] {
+/*input[type='number'] {
     -moz-appearance:textfield;
-}
+}*/
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

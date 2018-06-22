@@ -236,7 +236,7 @@
       <table>
         <tr>
           <td>Subtotal:</td>
-          <td>${{orderSummary.total}}</td>
+          <td>${{(orderSummary.total).toFixed(2)}}</td>
         </tr>
         <tr>
           <td>HST (13%):</td>
@@ -253,9 +253,9 @@
   </div>
   <div id="premade-platters" ng-show="showSection == 'premade'" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
     <h3 class="text-center">Premade Platters</h3>
-    <p class="text-center">Choose from some of our most popular premade platters including meat platters, vegetarian platters, and dessert platters.</p>
+    <p class="text-center">Choose from some of our most popular premade platters including meat platters, vegetarian platters, and dessert platters. Each platter serves 8 people.</p>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <p class="platter-name">{{platter.name}}</p>
         <p class="platter-desc">{{platter.desc}}</p>
         <p class="platter-price">${{platter.price}}</p>
@@ -276,11 +276,13 @@
       <input class="custom-field" type="text" ng-model="custom.name" placeholder="Enter name">
       <h4>Special Requests:</h4>
       <input class="custom-field" type="text" ng-model="custom.specialRequest" placeholder="Enter any special requests (allergies, dietary restrictions)">
-      <div class="col-md-5"><h5>Your Platter (click to remove):</h5></div>
+      <h4>How Many People?</h4>
+      <input class="custom-field" type="number" min="1" ng-model="custom.serving">
+      <div class="col-md-5"><h5>Your Platter:</h5></div>
       <div class="col-md-7"><h5>Menu Items (single servings):</h5></div>
 
       <div id="custom-platter" class="col-md-5">
-        <p class="custom-total-header">Total: ${{custom.price}}</p>
+        <p class="custom-total-header">Total: ${{(custom.price * custom.serving).toFixed(2)}}</p>
         <div class="custom-platter-items">
           <div class="custom-final-item" ng-repeat="item in custom.items">
             {{item.name}}
@@ -297,7 +299,7 @@
           <div class="platter-category-btn" ng-click="platterCategory = 'desserts'" ng-class="{'platter-category-selected': platterCategory == 'desserts'}">Desserts</div>
         </div>
         <ul class="list-group">
-          <li class="list-group-item custom-item" ng-repeat="item in items" ng-show="item.category == platterCategory"><strong>${{item.price}}</strong> - {{item.name}}<div class="premade-platter-add-button custom-button" ng-click="addToCustomPlatter(item)">+ Add to platter</div></li>
+          <li class="list-group-item custom-item" ng-repeat="item in items" ng-show="item.category == platterCategory"><strong>${{item.price}}</strong> - {{item.name}}<div class="premade-platter-add-button custom-button" ng-click="addToCustomPlatter(item)">+</div></li>
         </ul>
       </div>
     </div>
