@@ -314,7 +314,7 @@
       <div class="platter-category-btn" ng-click="bulkItemFilter = 'desserts'" ng-class="{'platter-category-selected': bulkItemFilter == 'desserts'}">Desserts</div>
       <div class="platter-category-btn" ng-click="bulkItemFilter = 'drinks'" ng-class="{'platter-category-selected': bulkItemFilter == 'drinks'}">Drinks</div>
     </div>
-    <div ng-repeat="bulkItem in bulkItems" ng-show="bulkItem.category == bulkItemFilter" class="bulk-item col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div ng-repeat="bulkItem in bulkItems" ng-show="bulkItem.category == bulkItemFilter" class="bulk-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
       ${{bulkItem.price}} - <strong>{{bulkItem.name}}</strong>
       <br>
       <div class="add-bulk-item" ng-click="addBulkItem(bulkItem)">

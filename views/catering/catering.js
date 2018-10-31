@@ -378,19 +378,19 @@ angular.module('myApp.catering', ['ngRoute'])
     },
     {
       name: "Assorted Dessert Platter",
-      desc: "Includes 2 finger baklava, 1 triangle baklava, 2 cookies and 1 almond cake for 8 people.",
+      desc: "Includes finger baklava, triangle baklava, cookies and almond cake for 8 people.",
       price: 124,
       quantity: 0
     },
     {
       name: "Finger Baklava Dessert Platter",
-      desc: "Includes 5 finger baklava",
+      desc: "Includes finger baklava for 8 people.",
       price: 80,
       quantity: 0
     },
     {
       name: "Triangle Baklava Dessert Platter",
-      desc: "Includes finger baklava, triangle baklava, cookies, almond cake, rice pudding",
+      desc: "Includes triangle baklava for 8 people",
       price: 140,
       quantity: 0
     },
@@ -655,70 +655,70 @@ angular.module('myApp.catering', ['ngRoute'])
       quantity: 0
     },
     {
-      name: "Grape Vine Roll",
+      name: "Grape Vine Roll (GF)",
       desc: "",
       category: "sides",
       price: 1.5,
       quantity: 0
     },
     {
-      name: "Hummus",
+      name: "Hummus (GF)",
       desc: "",
       category: "sides",
       price: 6,
       quantity: 0
     },
     {
-      name: "Stuffed Eggplant",
+      name: "Stuffed Eggplant (GF)",
       desc: "",
       category: "sides",
       price: 7,
       quantity: 0
     },
     {
-      name: "Stuffed Pepper",
+      name: "Stuffed Pepper (GF)",
       desc: "",
       category: "sides",
       price: 7,
       quantity: 0
     },
     {
-      name: "Falafel Ball",
+      name: "Falafel Ball (GF)",
       desc: "",
       category: "sides",
       price: 1.5,
       quantity: 0
     },
     {
-      name: "Curried Potatoes",
+      name: "Curried Potatoes (GF)",
       desc: "",
       category: "sides",
       price: 5,
       quantity: 0
     },
     {
-      name: "Curried Rice",
+      name: "Curried Rice with Mixed Vegetables (GF)",
       desc: "",
       category: "sides",
       price: 5,
       quantity: 0
     },
     {
-      name: "Fresh Cut Fries",
+      name: "Fresh Cut Fries (GF)",
       desc: "",
       category: "sides",
       price: 5,
       quantity: 0
     },
     {
-      name: "Lentil Soup",
+      name: "Lentil Soup (GF)",
       desc: "",
       category: "sides",
       price: 5,
       quantity: 0
     },
     {
-      name: "Chickpea Salad",
+      name: "Chickpea Salad (GF)",
       desc: "",
       category: "sides",
       price: 6,
@@ -741,7 +741,7 @@ angular.module('myApp.catering', ['ngRoute'])
 
     // Desserts
     {
-      name: "Rice Pudding",
+      name: "Rice Pudding (GF)",
       desc: "",
       category: "desserts",
       price: 3.5,
@@ -785,84 +785,84 @@ angular.module('myApp.catering', ['ngRoute'])
 
     // Drinks
     {
-      name: "Mango Juice (Bottle)",
+      name: "Mango Juice (473mL Bottle)",
       desc: "",
       category: "drinks",
       price: 3.29,
       quantity: 0
     },
     {
-      name: "Water (Bottle)",
+      name: "Water (600mL Bottle)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Chocolate Milk (Small)",
+      name: "Chocolate Milk (237mL Carton)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Chocolate Milk (Large)",
+      name: "Chocolate Milk (473mL Carton)",
       desc: "",
       category: "drinks",
       price: 2.89,
       quantity: 0
     },
     {
-      name: "San Pellegrino (Can)",
+      name: "San Pellegrino (330mL Can)",
       desc: "",
       category: "drinks",
       price: 2.89,
       quantity: 0
     },
     {
-      name: "Sumol (Can)",
+      name: "Sumol (330mL Can)",
       desc: "",
       category: "drinks",
       price: 2.89,
       quantity: 0
     },
     {
-      name: "Coca Cola (Can)",
+      name: "Coca Cola (335mL Can)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Diet Coke (Can)",
+      name: "Diet Coke (335mL Can)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Canada Dry (Can)",
+      name: "Canada Dry (335mL Can)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Nestea (Can)",
+      name: "Nestea (335mL Can)",
       desc: "",
       category: "drinks",
       price: 2.20,
       quantity: 0
     },
     {
-      name: "Sprite (Can)",
+      name: "Sprite (335mL Can)",
       desc: "",
       category: "drinks",
       price: 1.89,
       quantity: 0
     },
     {
-      name: "Compal (Bottle)",
+      name: "Compal (200mL Bottle)",
       desc: "",
       category: "drinks",
       price: 1.89,

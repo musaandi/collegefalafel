@@ -32,7 +32,7 @@ $(document).scroll(function () {
         );
       $("#sauces-menu-update")
         .html(
-          "<strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce"
+          "<strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce (all gluten free)"
         );
     }
     // Plates 1405
@@ -48,7 +48,7 @@ $(document).scroll(function () {
         );
       $("#sauces-menu-update")
         .html(
-          "<strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce"
+          "<strong>Sauces:</strong> tahina, garlic sauce, hummus, hot sauce, and sweet donair sauce (all gluten free)"
         );
     }
 
