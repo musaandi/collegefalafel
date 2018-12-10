@@ -4,6 +4,17 @@
     display: none;
   }
 
+  .step-header {
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 2px solid #D82928;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px;
+    margin: 15px;
+    color: #D82928;
+  }
+
   .special-request {
     width: 100%;
   }
@@ -153,28 +164,37 @@
     color: #D32423;
   }
 
+  .catering-menu-option {
+
+  }
+
 </style>
 
-<div class="row">
-  <h3 class="text-center">Select an option to construct your catering request</h3 class="text-center">
-  <div class="text-center col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <div ng-click="showSection = 'premade'" class="catering-option-button">Choose from some of our favourite premade platters</div>
-  </div>
-  <div class="text-center col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <div ng-click="showSection = 'custom'" class="catering-option-button">Build your own custom platter with selection across all of our menu items</div>
-  </div>
-  <div class="text-center col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <div ng-click="showSection = 'bulk'" class="catering-option-button">Choose from our regular menu items</div>
-  </div>
+<!-- <div class="row justify-content-center">
+  <div ng-click="showSection = 'premade'" class="catering-menu-option">Premade Platters</div>
+  <div ng-click="showSection = 'custom'" class="catering-menu-option">Custom Platters</div>
+  <div ng-click="showSection = 'bulk'" class="catering-menu-option">Regular Menu Items</div>
+</div> -->
+
+<div class="row justify-content-center">
+  <div class="text-center step-header">Step 1. Fill in your contact information</div>
 </div>
 
 <div class="row">
-  <div id="order-summary" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <p class="order-summary-header">Order Details</p>
+  <div class="col-md-12">
     <input ng-model="orderSummary.name" class="order-detail-input" type="text" placeholder="Enter your name" ng-blur="saveData()">
     <input ng-model="orderSummary.phone" class="order-detail-input" type="number" placeholder="Enter your phone number" ng-blur="saveData()">
     <input ng-model="orderSummary.email" class="order-detail-input" type="email" placeholder="Enter your email" ng-blur="saveData()">
     <textarea ng-model="orderSummary.specialRequest" rows="3" class="order-detail-input" placeholder="Add any special requests or specify allergies/dietary restrictions" ng-blur="saveData()"></textarea>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="text-center step-header">Step 2. Build your order</div>
+</div>
+
+<div class="row">
+  <div id="order-summary" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
     <p class="order-summary-header">Order Summary</p>
     <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
       <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
@@ -287,16 +307,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<h2>Gallery</h2>
-
-<div class="row catering-gallery">
-  <img style="width:50%; display:inline-block; float: left;" src="img/catering-1.jpg">
-  <img style="width:50%; display:inline-block; float: left;" src="img/catering-2.jpg">
-</div>
-
-<div class="row catering-gallery">
-  <img style="width:50%; display:inline-block; float: left;" src="img/catering-3.jpg">
-  <img style="width:50%; display:inline-block; float: left;" src="img/catering-4.jpg">
 </div>

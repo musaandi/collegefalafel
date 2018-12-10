@@ -809,7 +809,9 @@ address {
 .order-detail-input {
   margin-bottom: 10px;
   width: 100%;
-  padding: 5px !important;
+  padding: 10px !important;
+  border-radius: 15px !important;
+  margin-right: 20px;
 }
 
 .remove-from-order-button {
