@@ -1,5 +1,9 @@
 <style type="text/css">
 
+  #main-banner, #mobile-banner, #main-info, #main-nav, #mobile-nav, #mobile-info {
+    display: none;
+  }
+
   .special-request {
     width: 100%;
   }
@@ -150,51 +154,6 @@
   }
 
 </style>
-
-<h2>Catering</h2>
-
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-  <p>Catering at College Falafel is simple. We offer two types of catering packages; a large order of our typical menu items or customized platters. Platters range from completely vegetarian, to a meat lover’s buffet, all the way to a platter full of our unique desserts and everything in between.</p>
-  <p>To place an order please call us at (416) 532-8698 or fill out the custom order form below. All payment information is confirmed and processed over the phone.</p>
-
-  <h4 class="clickable" ng-click="faq = !faq" ng-show="!faq">Show Frequently Asked Questions</h4>
-  <h4 class="clickable" ng-click="faq = !faq" ng-show="faq">Hide Frequently Asked Questions</h4>
-
-  <div ng-show="faq">
-    <p><strong>When are you closed or unable to fulfill catering orders?</strong></p>
-    <p>Sunday</p>
-
-    <p><strong>What is your earliest pickup time on weekdays?</strong></p>
-    <p>11:00am</p>
-
-    <p><strong>When is your latest pickup time on weekdays?</strong></p>
-    <p>10:00pm</p>
-
-    <p><strong>When is your busy time when you do not want orders picked up?</strong></p>
-    <p>12:00pm - 12:30pm</p>
-
-    <p><strong>When picking up an order, which side of the store should we come to and is there parking?</strong></p>
-    <p>Pick up in front of the store and you can park across the street.</p>
-
-    <p><strong>Are you able to accept same day orders?</strong></p>
-    <p>Yes</p>
-
-    <p><strong>What is the maximum capacity for a same-day order with 2 hours notice?</strong></p>
-    <p>50 meals</p>
-
-    <p><strong>What is the minimum number of hours you need to fulfill a same-day order?</strong></p>
-    <p>2</p>
-
-    <p><strong>What is the maximum meal capacity for catering orders with minimum 3+ days notice?</strong></p>
-    <p>500 meals</p>
-
-    <p><strong>What kind of dietary accomodations do you provide?</strong></p>
-    <p>We have halal options, vegetarian options, vegan options, gluten-free options and dairy-free options.</p>
-  </div>
-
-  </div>
-</div>
 
 <div class="row">
   <h3 class="text-center">Select an option to construct your catering request</h3 class="text-center">
