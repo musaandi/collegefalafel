@@ -750,7 +750,7 @@ address {
 
 .premade-platter-add-button, .premade-platter-new-button {
   padding: 5px 10px 5px 10px;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: #d92a28;
   display: inline-block;
   border-radius: 5px;
@@ -773,7 +773,11 @@ address {
 
 .platter-desc {
   font-size: 1em;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
+  min-height: 150px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .platter-name {

@@ -16,6 +16,8 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.faq = false;
   $scope.platterCategory = "protein";
 
+  $scope.showSummary = false;
+
   $scope.showSection = 'premade';
 
   $scope.custom = {
@@ -318,6 +320,7 @@ angular.module('myApp.catering', ['ngRoute'])
           specialRequest: customPlatter.specialRequest
         }
         $scope.orderSummary.items.push(obj);
+        alert("Your custom platter '" + customPlatter.name + "' was added to your order.");
       }
       $scope.updateTotals();
     }

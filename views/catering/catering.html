@@ -4,6 +4,58 @@
     display: none;
   }
 
+  #order-summary-container {
+    position: fixed;
+    top: 20px;
+    left: 2%;
+    background-color: white;
+    width: 96%;
+    padding: 10px;
+    overflow-y: scroll;
+    border: 2px solid #db271f;
+    border-radius: 5px;
+    max-height: 90vh;
+    z-index: 5;
+  }
+
+  .background-fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    background-color: #7a1817;
+    opacity: 0.9;
+  }
+
+  #order-summary {
+    margin-top: 0px;
+  }
+
+  .order-summary-header {
+    margin-top: 0px;
+  }
+
+  .catering-menu-option {
+    background-color: #db271f;
+    color: white;
+    font-size: 1.5em;
+    padding: 0px 10px 0px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    border-bottom: 3px solid #d8cec5;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .catering-menu-option:active {
+    opacity: 0.5;
+  }
+
+  textarea {
+     resize: none;
+  }
+
   .step-header {
     font-weight: bold;
     font-size: 1.5em;
@@ -11,7 +63,7 @@
     border-radius: 15px;
     display: inline-block;
     padding: 10px;
-    margin: 15px;
+    margin: 0px 15px 15px 15px;
     color: #D82928;
   }
 
@@ -106,6 +158,7 @@
     padding: 5px 10px 5px 10px;
     margin-right: 5px;
     margin-bottom: 10px;
+    margin-top: 10px;
     border: 1px solid #D32423;
     border-radius: 5px;
     cursor: pointer;
@@ -164,17 +217,7 @@
     color: #D32423;
   }
 
-  .catering-menu-option {
-
-  }
-
 </style>
-
-<!-- <div class="row justify-content-center">
-  <div ng-click="showSection = 'premade'" class="catering-menu-option">Premade Platters</div>
-  <div ng-click="showSection = 'custom'" class="catering-menu-option">Custom Platters</div>
-  <div ng-click="showSection = 'bulk'" class="catering-menu-option">Regular Menu Items</div>
-</div> -->
 
 <div class="row justify-content-center">
   <div class="text-center step-header">Step 1. Fill in your contact information</div>
@@ -194,47 +237,19 @@
 </div>
 
 <div class="row">
-  <div id="order-summary" class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-    <p class="order-summary-header">Order Summary</p>
-    <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
-      <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
-      <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
-      <div class="edit-from-order-button" ng-click="item.edit = !item.edit; saveData();">
-        <i class="fa fa-edit"></i>
-      </div>
-      <div class="remove-from-order-button" ng-click="reduceFromOrder(item.name, item.desc)">
-        <i class="fa fa-minus"></i>
-      </div>
-      <div class="remove-from-order-button" ng-click="removeFromOrder(item.id)">
-        <i class="fa fa-close"></i>
-      </div>
-      <br>
-      <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Add special request"></textarea>
-    </div>
-    <div id="totals">
-      <table>
-        <tr>
-          <td>Subtotal:</td>
-          <td>${{(orderSummary.total).toFixed(2)}}</td>
-        </tr>
-        <tr>
-          <td>HST (13%):</td>
-          <td>${{(orderSummary.total * 0.13).toFixed(2)}}</td>
-        </tr>
-        <tr>
-          <td><strong>Total:</strong></td>
-          <td><strong>${{(orderSummary.total * 1.13).toFixed(2)}}</strong></td>
-        </tr>
-      </table>
-      <div class="premade-platter-add-button clear-bottom" ng-click="submitOrder()">Submit Order</div>
-      <div class="premade-platter-add-button clear-bottom" ng-click="resetOrder()">Clear</div>
-    </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div ng-click="showSection = 'premade'" class="catering-menu-option">Premade Platters</div>
+    <div ng-click="showSection = 'custom'" class="catering-menu-option">Custom Platters</div>
+    <div ng-click="showSection = 'bulk'" class="catering-menu-option">Regular Menu Items</div>
   </div>
-  <div id="premade-platters" ng-show="showSection == 'premade'" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+</div>
+
+<div class="row">
+  <div id="premade-platters" ng-show="showSection == 'premade'" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="text-center">Premade Platters</h3>
     <p class="text-center">Choose from some of our most popular premade platters including meat platters, vegetarian platters, and dessert platters. Each platter serves 8 people.</p>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div ng-repeat="platter in premadePlatters" class="premade-platter-display col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <p class="platter-name">{{platter.name}}</p>
         <p class="platter-desc">{{platter.desc}}</p>
         <p class="platter-price">${{platter.price}}</p>
@@ -248,7 +263,7 @@
       </div>
     </div>
   </div>
-  <div id="build-platters" ng-show="showSection == 'custom'" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+  <div id="build-platters" ng-show="showSection == 'custom'" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="text-center">Build Your Own Platter</h3>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h4>Name:</h4>
@@ -283,7 +298,7 @@
       </div>
     </div>
   </div>
-  <div id="bulk-menu-items" ng-show="showSection == 'bulk'" class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+  <div id="bulk-menu-items" ng-show="showSection == 'bulk'" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <h3 class="text-center">Bulk Menu Items</h3>
     <p class="text-center">Choose from our regular menu items</p>
     <div class="platter-category-btns">
@@ -293,7 +308,7 @@
       <div class="platter-category-btn" ng-click="bulkItemFilter = 'desserts'" ng-class="{'platter-category-selected': bulkItemFilter == 'desserts'}">Desserts</div>
       <div class="platter-category-btn" ng-click="bulkItemFilter = 'drinks'" ng-class="{'platter-category-selected': bulkItemFilter == 'drinks'}">Drinks</div>
     </div>
-    <div ng-repeat="bulkItem in bulkItems" ng-show="bulkItem.category == bulkItemFilter" class="bulk-item col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div ng-repeat="bulkItem in bulkItems" ng-show="bulkItem.category == bulkItemFilter" class="bulk-item col-xs-12 col-sm-12 col-md-6 col-lg-6">
       ${{bulkItem.price}} - <strong>{{bulkItem.name}}</strong>
       <br>
       <div class="add-bulk-item" ng-click="addBulkItem(bulkItem)">
@@ -308,3 +323,52 @@
     </div>
   </div>
 </div>
+
+<div class="row justify-content-center">
+  <div class="text-center step-header">Step 3. Review and submit your request</div>
+  <div class="col-md-12">
+    <p ng-click="showSummary = !showSummary" class="catering-menu-option">Click here to review your order.</p>
+  </div>
+</div>
+
+<div ng-show="showSummary" id="order-summary-container">
+  <div id="order-summary">
+    <p class="order-summary-header">Order Summary</p>
+    <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
+      <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
+      <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
+      <div class="edit-from-order-button" ng-click="item.edit = !item.edit; saveData();">
+        <i class="fa fa-edit"></i>
+      </div>
+      <div class="remove-from-order-button" ng-click="reduceFromOrder(item.name, item.desc)">
+        <i class="fa fa-minus"></i>
+      </div>
+      <div class="remove-from-order-button" ng-click="removeFromOrder(item.id)">
+        <i class="fa fa-close"></i>
+      </div>
+      <br>
+      <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Add special request"></textarea>
+    </div>
+    <div id="totals">
+      <table>
+        <tr>
+          <td>Subtotal:</td>
+          <td>${{(orderSummary.total).toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td>HST (13%):</td>
+          <td>${{(orderSummary.total * 0.13).toFixed(2)}}</td>
+        </tr>
+        <tr>
+          <td><strong>Total:</strong></td>
+          <td><strong>${{(orderSummary.total * 1.13).toFixed(2)}}</strong></td>
+        </tr>
+      </table>
+      <div class="premade-platter-add-button" ng-click="showSummary = !showSummary">Continue Editing Order</div>
+      <div class="premade-platter-add-button" ng-click="submitOrder()">Submit Order</div>
+      <div class="premade-platter-add-button" ng-click="resetOrder()">Clear</div>
+    </div>
+  </div>
+</div>
+
+<div ng-click="showSummary = !showSummary" ng-show="showSummary" class="background-fade"></div>
