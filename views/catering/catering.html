@@ -217,7 +217,23 @@
     color: #D32423;
   }
 
+  #catering-top-menu {
+    margin-bottom: 10px;
+  }
+
+  #catering-top-menu a {
+    margin: 5px;
+  }
+
 </style>
+
+<div id="catering-top-menu">
+  <a href="#!/home">HOME</a>
+  <a href="#!/menu">MENU</a>
+  <a href="#!/catering-info">CATERING</a>
+  <a href="#!/contact">CONTACT</a>
+  <a href="#!/about">ABOUT US</a>
+</div>
 
 <div class="row justify-content-center">
   <div class="text-center step-header">Step 1. Fill in your contact information</div>
@@ -338,7 +354,7 @@
       <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
       <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
       <div class="edit-from-order-button" ng-click="item.edit = !item.edit; saveData();">
-        <i class="fa fa-edit"></i>
+        <i class="fa fa-edit"></i> {{item.edit ? "Save Special Request" : "Add Special Request"}}
       </div>
       <div class="remove-from-order-button" ng-click="reduceFromOrder(item.name, item.desc)">
         <i class="fa fa-minus"></i>
@@ -347,7 +363,7 @@
         <i class="fa fa-close"></i>
       </div>
       <br>
-      <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Add special request"></textarea>
+      <textarea class="special-request-input" ng-show="item.edit == true" ng-model="item.specialRequest" placeholder="Enter special request"></textarea>
     </div>
     <div id="totals">
       <table>

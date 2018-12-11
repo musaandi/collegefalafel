@@ -849,8 +849,10 @@ address {
 }
 
 .special-request-input {
-  margin-top: 10px;
+  margin-top: 5px;
   padding: 10px;
+  border: 1px solid #d8cec6;
+  border-radius: 5px;
 }
 
 .special-request {
