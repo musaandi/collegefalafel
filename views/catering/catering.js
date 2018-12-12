@@ -29,23 +29,23 @@ angular.module('myApp.catering', ['ngRoute'])
   };
 
   $scope.items = [
-    { category: "protein", name: "meat: chicken", price: 6 },
-    { category: "protein", name: "meat: beef", price: 7 },
-    { category: "protein", name: "meat: donair", price: 7 },
-    { category: "protein", name: "meat: lamb", price: 8 },
+    { category: "protein", name: "meat: chicken", price: 6.99 },
+    { category: "protein", name: "meat: beef", price: 7.99 },
+    { category: "protein", name: "meat: donair", price: 7.99 },
+    { category: "protein", name: "meat: lamb", price: 8.99 },
     { category: "protein", name: "veg: 3 falafel balls", price: 4.50 },
-    { category: "protein", name: "veg: stuffed eggplant", price: 7 },
-    { category: "protein", name: "veg: stuffed pepper", price: 7 },
-    { category: "sides", name: "pita", price: 1 },
-    { category: "sides", name: "salads", price: 6 },
-    { category: "sides", name: "dips (hummus, tzatziki/garlic dip, tahini, hot sauce)", price: 3 },
-    { category: "sides", name: "chicken samousa", price: 2 },
-    { category: "sides", name: "beef samousa", price: 2 },
-    { category: "sides", name: "vege samousa", price: 2 },
-    { category: "desserts", name: "2 finger baklava", price: 4 },
-    { category: "desserts", name: "1 triangle", price: 3.50 },
-    { category: "desserts", name: "2 cookies", price: 3 },
-    { category: "desserts", name: "1 almond cake", price: 2 }
+    { category: "protein", name: "veg: stuffed eggplant", price: 7.99 },
+    { category: "protein", name: "veg: stuffed pepper", price: 7.99 },
+    { category: "sides", name: "pita", price: 1.00 },
+    { category: "sides", name: "salads", price: 6.99 },
+    { category: "sides", name: "dips (hummus, tzatziki/garlic dip, tahini, hot sauce)", price: 6.99 },
+    { category: "sides", name: "chicken samousa", price: 2.99 },
+    { category: "sides", name: "beef samousa", price: 2.99 },
+    { category: "sides", name: "vege samousa", price: 2.99 },
+    { category: "desserts", name: "2 finger baklava", price: 4.99 },
+    { category: "desserts", name: "1 triangle", price: 3.99 },
+    { category: "desserts", name: "2 cookies", price: 3.99 },
+    { category: "desserts", name: "1 almond cake", price: 2.99 }
   ]
 
   $scope.toggleFromFilterList = function(name) {
@@ -339,44 +339,44 @@ angular.module('myApp.catering', ['ngRoute'])
   $scope.premadePlatters = [
     {
       name: "Chicken Platter",
-      desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 128,
+      desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
       name: "Beef Platter",
-      desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 136,
+      desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
       name: "Donair Platter",
-      desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 136,
+      desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
       name: "Lamb Platter",
-      desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 144,
+      desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 127.92,
       quantity: 0
     },
     {
       name: "Vegetarian Falafel Platter",
-      desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 132,
+      desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
       name: "Vegetarian Stuffed Eggplant Platter",
-      desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 152,
+      desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
       name: "Vegetarian Stuffed Pepper Platter",
-      desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), pita, salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 152,
+      desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
+      price: 119.92,
       quantity: 0
     },
     {
@@ -387,14 +387,14 @@ angular.module('myApp.catering', ['ngRoute'])
     },
     {
       name: "Finger Baklava Dessert Platter",
-      desc: "Includes finger baklava for 8 people.",
-      price: 80,
+      desc: "Includes finger baklava for 8 people. (1 for each person)",
+      price: 15.92,
       quantity: 0
     },
     {
       name: "Triangle Baklava Dessert Platter",
-      desc: "Includes triangle baklava for 8 people",
-      price: 140,
+      desc: "Includes triangle baklava for 8 people. (1 for each person)",
+      price: 31.92,
       quantity: 0
     },
   ];
@@ -461,77 +461,77 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "East Coast Donair Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Chicken Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8.5,
+      price: 8.99,
       quantity: 0
     },
     {
       name: "Beef Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Lamb Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 10,
+      price: 10.99,
       quantity: 0
     },
     {
       name: "Chicken Breast Kebab Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Veal Liver Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Kefta Burger Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Falafel Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 7.5,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Vegetarian Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8.5,
+      price: 8.99,
       quantity: 0
     },
     {
       name: "Fish Fillet Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 10,
+      price: 10.99,
       quantity: 0
     },
     {
       name: "Breakfast Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8,
+      price: 8.99,
       quantity: 0
     },
 
@@ -540,77 +540,77 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Donair (East Coast) Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Chicken Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Beef Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Lamb Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 15,
+      price: 15.99,
       quantity: 0
     },
     {
       name: "Chicken Breast Kebab Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Veal Liver Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Kefta Burger Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Falafel Plate",
       desc: "",
       category: "plates",
-      price: 13,
+      price: 13.99,
       quantity: 0
     },
     {
       name: "Vegetarian Plate",
       desc: "",
       category: "plates",
-      price: 14,
+      price: 14.99,
       quantity: 0
     },
     {
       name: "Fish Fillet Plate",
       desc: "",
       category: "plates",
-      price: 15,
+      price: 15.99,
       quantity: 0
     },
     {
       name: "Shrimp Plate",
       desc: "",
       category: "plates",
-      price: 15,
+      price: 15.99,
       quantity: 0
     },
 
@@ -619,126 +619,126 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Spinach Pie",
       desc: "",
       category: "sides",
-      price: 3,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Cheese Pie",
       desc: "",
       category: "sides",
-      price: 3,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Leek Roll",
       desc: "",
       category: "sides",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Chicken Samousa",
       desc: "",
       category: "sides",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Beef Samousa",
       desc: "",
       category: "sides",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Vegetarian Samousa",
       desc: "",
       category: "sides",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Grape Vine Roll (GF)",
       desc: "",
       category: "sides",
-      price: 1.5,
+      price: 1.99,
       quantity: 0
     },
     {
       name: "Hummus (GF)",
       desc: "",
       category: "sides",
-      price: 6,
+      price: 6.99,
       quantity: 0
     },
     {
       name: "Stuffed Eggplant (GF)",
       desc: "",
       category: "sides",
-      price: 7,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Stuffed Pepper (GF)",
       desc: "",
       category: "sides",
-      price: 7,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Falafel Ball (GF)",
       desc: "",
       category: "sides",
-      price: 1.5,
+      price: 1.50,
       quantity: 0
     },
     {
       name: "Curried Potatoes (GF)",
       desc: "",
       category: "sides",
-      price: 5,
+      price: 5.99,
       quantity: 0
     },
     {
       name: "Curried Rice with Mixed Vegetables (GF)",
       desc: "",
       category: "sides",
-      price: 5,
+      price: 5.99,
       quantity: 0
     },
     {
       name: "Fresh Cut Fries (GF)",
       desc: "",
       category: "sides",
-      price: 5,
+      price: 5.99,
       quantity: 0
     },
     {
       name: "Lentil Soup (GF)",
       desc: "",
       category: "sides",
-      price: 5,
+      price: 5.99,
       quantity: 0
     },
     {
       name: "Chickpea Salad (GF)",
       desc: "",
       category: "sides",
-      price: 6,
+      price: 6.99,
       quantity: 0
     },
     {
       name: "Tabouli Salad",
       desc: "",
       category: "sides",
-      price: 6,
+      price: 6.99,
       quantity: 0
     },
     {
       name: "Mediterranean Salad",
       desc: "",
       category: "sides",
-      price: 6,
+      price: 6.99,
       quantity: 0
     },
 
@@ -747,42 +747,42 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Rice Pudding (GF)",
       desc: "",
       category: "desserts",
-      price: 3.5,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Triangle Baklava",
       desc: "",
       category: "desserts",
-      price: 3.5,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Finger Baklava",
       desc: "",
       category: "desserts",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Almond Cookie ",
       desc: "",
       category: "desserts",
-      price: 1.5,
+      price: 1.99,
       quantity: 0
     },
     {
       name: "Honey Nut Cookie",
       desc: "",
       category: "desserts",
-      price: 1.5,
+      price: 1.99,
       quantity: 0
     },
     {
       name: "Almond Cake",
       desc: "",
       category: "desserts",
-      price: 2,
+      price: 2.99,
       quantity: 0
     },
 

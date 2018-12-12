@@ -89,6 +89,7 @@
 
   #custom-platter {
     font-size: 1.3em;
+    margin-bottom: 10px;
   }
 
   .custom-total-header {
@@ -351,7 +352,7 @@
   <div id="order-summary">
     <p class="order-summary-header">Order Summary</p>
     <div ng-repeat="item in orderSummary.items" class="order-summary-platters">
-      <p class="item-content"><strong>${{item.price}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
+      <p class="item-content"><strong>${{item.price.toFixed(2)}} - {{item.name}} (x{{item.quantity}})</strong> {{item.desc}}</p>
       <div class="special-request" ng-show="item.edit == false"><em>{{item.specialRequest}}</em></div>
       <div class="edit-from-order-button" ng-click="item.edit = !item.edit; saveData();">
         <i class="fa fa-edit"></i> {{item.edit ? "Save Special Request" : "Add Special Request"}}
