@@ -62,7 +62,7 @@ $message = "
 <title>Collegefalafel Mail</title>
 </head>
 <body>
-<p>Your catering request with the following information has been submitted to Collegefalafel. Thank you for your submission, a representative from Collegefalafel will followup with you soon.</p>
+<p>Your catering request with the following information has been submitted to College Falafel. Thank you for your submission, a representative from College Falafel will followup with you soon.</p>
 <table>
 <tr>
 <th>Name</th>

@@ -123,7 +123,7 @@ angular.module('myApp.catering', ['ngRoute'])
       var timestamp = new Date();
 
       $scope.orderSummary.items.forEach(function(item){
-        details += "(x" + item.quantity + ") $" + item.price + " - " + item.name;
+        details += "(x" + item.quantity + ") $" + (Math.round(item.price * 100) / 100).toString() + " - " + item.name;
         if (item.desc != "") {
           details += ": " + item.desc;
         }
