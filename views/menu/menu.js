@@ -13,7 +13,7 @@ angular.module('myApp.menu', ['ngRoute'])
   });
 }])
 
-.controller('MenuCtrl', function($scope, $location, $anchorScroll) {
+.controller('MenuCtrl', ['$scope', '$location', '$anchorScroll', 'menuService', function($scope, $location, $anchorScroll, menuService) {
 
   $('[data-toggle="tooltip"]').tooltip();
 
@@ -23,4 +23,6 @@ angular.module('myApp.menu', ['ngRoute'])
     $anchorScroll();
   };
 
-});
+  $scope.menu = menuService.getMenu();
+
+}]);
