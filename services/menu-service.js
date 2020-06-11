@@ -500,7 +500,7 @@ this.getMenu = function() {
 
     "BEVERAGE_SUMOL": {
       "name": "Sumol",
-      "desc": "330mL Can - choice between 3 flavors: Orange, Pineapple & Passion Fruit",
+      "desc": "330 mL Can - choice between 3 flavors: Orange, Pineapple & Passion Fruit",
       "price": "$2.99"
     },
 
