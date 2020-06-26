@@ -188,7 +188,7 @@ this.getMenu = function() {
 
     "SIDE_LENTIL_SOUP_GF": {
       "name": "Lentil Soup (GF)",
-      "desc": "Soup with green lentils, herbs, onions, tomato, carrots, and garlic",
+      "desc": "Soup with green lentils, herbs, onions, tomato, carrots, and garlic.",
       "price": "$6.89"
     },
 
