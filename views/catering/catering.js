@@ -29,23 +29,22 @@ angular.module('myApp.catering', ['ngRoute'])
   };
 
   $scope.items = [
-    { category: "protein", name: "meat: chicken", price: 6.99 },
-    { category: "protein", name: "meat: beef", price: 7.99 },
+    { category: "protein", name: "meat: chicken", price: 7.99 },
+    { category: "protein", name: "meat: beef", price: 8.99 },
     { category: "protein", name: "meat: donair", price: 7.99 },
     { category: "protein", name: "meat: lamb", price: 8.99 },
-    { category: "protein", name: "veg: 3 falafel balls", price: 4.50 },
-    { category: "protein", name: "veg: stuffed eggplant", price: 7.99 },
-    { category: "protein", name: "veg: stuffed pepper", price: 7.99 },
-    { category: "sides", name: "pita", price: 1.00 },
-    { category: "sides", name: "salads", price: 6.99 },
+    { category: "protein", name: "veg: 3 falafel balls", price: 6.99 },
+    { category: "protein", name: "veg: stuffed eggplant", price: 6.99 },
+    { category: "sides", name: "pita", price: 1.50 },
+    { category: "sides", name: "salads", price: 8.99 },
     { category: "sides", name: "dips (hummus, tzatziki/garlic dip, tahini, hot sauce)", price: 6.99 },
     { category: "sides", name: "chicken samousa", price: 2.99 },
     { category: "sides", name: "beef samousa", price: 2.99 },
     { category: "sides", name: "vege samousa", price: 2.99 },
-    { category: "desserts", name: "2 finger baklava", price: 4.99 },
-    { category: "desserts", name: "1 triangle", price: 3.99 },
-    { category: "desserts", name: "2 cookies", price: 3.99 },
-    { category: "desserts", name: "1 almond cake", price: 2.99 }
+    { category: "desserts", name: "2 finger baklava", price: 6.99 },
+    { category: "desserts", name: "1 triangle", price: 4.99 },
+    { category: "desserts", name: "2 cookies", price: 4.99 },
+    { category: "desserts", name: "1 almond cake", price: 3.99 }
   ]
 
   $scope.toggleFromFilterList = function(name) {
@@ -461,77 +460,77 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "East Coast Donair Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9.99,
+      price: 11.99,
       quantity: 0
     },
     {
       name: "Chicken Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8.99,
+      price: 11.99,
       quantity: 0
     },
     {
       name: "Beef Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9.99,
+      price: 12.99,
       quantity: 0
     },
     {
       name: "Lamb Shawarma Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 10.99,
+      price: 12.99,
       quantity: 0
     },
     {
       name: "Chicken Breast Kebab Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9.99,
+      price: 11.99,
       quantity: 0
     },
     {
       name: "Veal Liver Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9.99,
+      price: 11.99,
       quantity: 0
     },
     {
       name: "Kefta Burger Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 9.99,
+      price:11.99,
       quantity: 0
     },
     {
       name: "Falafel Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 7.99,
+      price: 10.99,
       quantity: 0
     },
     {
       name: "Vegetarian Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8.99,
+      price: 10.99,
       quantity: 0
     },
     {
       name: "Fish Fillet Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 10.99,
+      price: 12.99,
       quantity: 0
     },
     {
       name: "Breakfast Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 8.99,
+      price: 10.99,
       quantity: 0
     },
 
@@ -540,77 +539,77 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Donair (East Coast) Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 16.99,
       quantity: 0
     },
     {
       name: "Chicken Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 16.99,
       quantity: 0
     },
     {
       name: "Beef Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 18.99,
       quantity: 0
     },
     {
       name: "Lamb Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 15.99,
+      price: 18.99,
       quantity: 0
     },
     {
       name: "Chicken Breast Kebab Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 17.99,
       quantity: 0
     },
     {
       name: "Veal Liver Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 17.99,
       quantity: 0
     },
     {
       name: "Kefta Burger Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 17.99,
       quantity: 0
     },
     {
       name: "Falafel Plate",
       desc: "",
       category: "plates",
-      price: 13.99,
+      price: 16.99,
       quantity: 0
     },
     {
       name: "Vegetarian Plate",
       desc: "",
       category: "plates",
-      price: 14.99,
+      price: 16.99,
       quantity: 0
     },
     {
       name: "Fish Fillet Plate",
       desc: "",
       category: "plates",
-      price: 15.99,
+      price: 18.99,
       quantity: 0
     },
     {
       name: "Shrimp Plate",
       desc: "",
       category: "plates",
-      price: 15.99,
+      price: 18.99,
       quantity: 0
     },
 
@@ -619,126 +618,119 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Spinach Pie",
       desc: "",
       category: "sides",
-      price: 3.99,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Cheese Pie",
       desc: "",
       category: "sides",
-      price: 3.99,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Leek Roll",
       desc: "",
       category: "sides",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Chicken Samousa",
       desc: "",
       category: "sides",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Beef Samousa",
       desc: "",
       category: "sides",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Vegetarian Samousa",
       desc: "",
       category: "sides",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Grape Vine Roll (GF)",
       desc: "",
       category: "sides",
-      price: 1.99,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Hummus (GF)",
       desc: "",
       category: "sides",
-      price: 6.99,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Stuffed Eggplant (GF)",
       desc: "",
       category: "sides",
-      price: 7.99,
-      quantity: 0
-    },
-    {
-      name: "Stuffed Pepper (GF)",
-      desc: "",
-      category: "sides",
-      price: 7.99,
+      price: 9.99,
       quantity: 0
     },
     {
       name: "Falafel Ball (GF)",
       desc: "",
       category: "sides",
-      price: 1.50,
+      price: 2.00,
       quantity: 0
     },
     {
       name: "Curried Potatoes (GF)",
       desc: "",
       category: "sides",
-      price: 5.99,
+      price: 7.99,
       quantity: 0
     },
     {
-      name: "Curried Rice with Mixed Vegetables (GF)",
+      name: "Rice with Mixed Vegetables (GF)",
       desc: "",
       category: "sides",
-      price: 5.99,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Fresh Cut Fries (GF)",
       desc: "",
       category: "sides",
-      price: 5.99,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Lentil Soup (GF)",
       desc: "",
       category: "sides",
-      price: 5.99,
+      price: 7.99,
       quantity: 0
     },
     {
       name: "Chickpea Salad (GF)",
       desc: "",
       category: "sides",
-      price: 6.99,
+      price: 8.99,
       quantity: 0
     },
     {
       name: "Tabouli Salad",
       desc: "",
       category: "sides",
-      price: 6.99,
+      price: 8.99,
       quantity: 0
     },
     {
       name: "Mediterranean Salad",
       desc: "",
       category: "sides",
-      price: 6.99,
+      price: 8.99,
       quantity: 0
     },
 
@@ -747,42 +739,35 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Rice Pudding (GF)",
       desc: "",
       category: "desserts",
-      price: 3.99,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Triangle Baklava",
       desc: "",
       category: "desserts",
-      price: 3.99,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Finger Baklava",
       desc: "",
       category: "desserts",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
     {
       name: "Almond Cookie ",
       desc: "",
       category: "desserts",
-      price: 1.99,
-      quantity: 0
-    },
-    {
-      name: "Honey Nut Cookie",
-      desc: "",
-      category: "desserts",
-      price: 1.99,
+      price: 2.99,
       quantity: 0
     },
     {
       name: "Almond Cake",
       desc: "",
       category: "desserts",
-      price: 2.99,
+      price: 3.99,
       quantity: 0
     },
 
@@ -791,84 +776,126 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Mango Juice (473mL Bottle)",
       desc: "",
       category: "drinks",
-      price: 3.29,
+      price: 4.99,
       quantity: 0
     },
     {
       name: "Water (600mL Bottle)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Chocolate Milk (237mL Carton)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Chocolate Milk (473mL Carton)",
       desc: "",
       category: "drinks",
-      price: 2.89,
+      price: 3.49,
       quantity: 0
     },
     {
       name: "San Pellegrino (330mL Can)",
       desc: "",
       category: "drinks",
-      price: 2.89,
+      price: 3.49,
       quantity: 0
     },
     {
       name: "Sumol (330mL Can)",
       desc: "",
       category: "drinks",
-      price: 2.89,
+      price: 3.49,
       quantity: 0
     },
     {
       name: "Coca Cola (335mL Can)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Diet Coke (335mL Can)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Canada Dry (335mL Can)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Nestea (335mL Can)",
       desc: "",
       category: "drinks",
-      price: 2.20,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Sprite (335mL Can)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
       quantity: 0
     },
     {
       name: "Compal (200mL Bottle)",
       desc: "",
       category: "drinks",
-      price: 1.89,
+      price: 2.49,
+      quantity: 0
+    },
+    {
+      name: "Black River (300mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 3.49,
+      quantity: 0
+    },
+    {
+      name: "Perrier (330mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 4.99,
+      quantity: 0
+    },
+    {
+      name: "Kambucha (330mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 5.49,
+      quantity: 0
+    },
+    {
+      name: "Coca Cola (500mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 4.99,
+      quantity: 0
+    },
+    {
+      name: "Root Beer (335mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 4.99,
+      quantity: 0
+    },
+    {
+      name: "Ginger Beer (335mL Bottle)",
+      desc: "",
+      category: "drinks",
+      price: 4.99,
       quantity: 0
     }
   ]
