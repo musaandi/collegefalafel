@@ -33,7 +33,7 @@ angular.module('myApp.catering', ['ngRoute'])
     { category: "protein", name: "meat: beef", price: 8.99 },
     { category: "protein", name: "meat: donair", price: 7.99 },
     { category: "protein", name: "meat: lamb", price: 8.99 },
-    { category: "protein", name: "veg: 3 falafel balls", price: 6.99 },
+    { category: "protein", name: "veg: 3 falafel balls", price: 5.99 },
     { category: "protein", name: "veg: stuffed eggplant", price: 6.99 },
     { category: "sides", name: "pita", price: 1.50 },
     { category: "sides", name: "salads", price: 8.99 },
@@ -339,61 +339,55 @@ angular.module('myApp.catering', ['ngRoute'])
     {
       name: "Chicken Platter",
       desc: "Includes chicken, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
+      price: 136.42,
       quantity: 0
     },
     {
       name: "Beef Platter",
       desc: "Includes beef, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
+      price: 143.92,
       quantity: 0
     },
     {
       name: "Donair Platter",
       desc: "Includes donair, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
+      price: 136.42,
       quantity: 0
     },
     {
       name: "Lamb Platter",
       desc: "Includes lamb, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 127.92,
+      price: 143.92,
       quantity: 0
     },
     {
       name: "Vegetarian Falafel Platter",
       desc: "Includes falafel balls, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
+      price: 121.42,
       quantity: 0
     },
     {
       name: "Vegetarian Stuffed Eggplant Platter",
       desc: "Includes stuffed eggplant, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
-      quantity: 0
-    },
-    {
-      name: "Vegetarian Stuffed Pepper Platter",
-      desc: "Includes stuffed pepper, vegetable samousa, dips (hummus, tzatziki/garlic dip, tahini, hot sauce), salads, rice with mixed vegetables and curried potatoes for 8 people.",
-      price: 119.92,
+      price: 128.92,
       quantity: 0
     },
     {
       name: "Assorted Dessert Platter",
-      desc: "Includes finger baklava, triangle baklava, cookies and almond cake for 8 people.",
-      price: 124,
+      desc: "Includes finger baklava, triangle baklava, almond cookies and cake for 8 people.",
+      price: 121.42,
       quantity: 0
     },
     {
       name: "Finger Baklava Dessert Platter",
       desc: "Includes finger baklava for 8 people. (1 for each person)",
-      price: 15.92,
+      price: 29.92,
       quantity: 0
     },
     {
       name: "Triangle Baklava Dessert Platter",
       desc: "Includes triangle baklava for 8 people. (1 for each person)",
-      price: 31.92,
+      price: 37.92,
       quantity: 0
     },
   ];
@@ -509,7 +503,7 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Falafel Sandwich",
       desc: "",
       category: "sandwiches",
-      price: 10.99,
+      price: 9.99,
       quantity: 0
     },
     {
@@ -539,14 +533,14 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Donair (East Coast) Plate",
       desc: "",
       category: "plates",
-      price: 16.99,
+      price: 17.99,
       quantity: 0
     },
     {
       name: "Chicken Shawarma Plate",
       desc: "",
       category: "plates",
-      price: 16.99,
+      price: 17.99,
       quantity: 0
     },
     {
@@ -588,7 +582,7 @@ angular.module('myApp.catering', ['ngRoute'])
       name: "Falafel Plate",
       desc: "",
       category: "plates",
-      price: 16.99,
+      price: 15.99,
       quantity: 0
     },
     {
@@ -600,13 +594,6 @@ angular.module('myApp.catering', ['ngRoute'])
     },
     {
       name: "Fish Fillet Plate",
-      desc: "",
-      category: "plates",
-      price: 18.99,
-      quantity: 0
-    },
-    {
-      name: "Shrimp Plate",
       desc: "",
       category: "plates",
       price: 18.99,
