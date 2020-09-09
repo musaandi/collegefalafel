@@ -33,7 +33,7 @@ this.getMenu = function() {
     "SANDWICH_FALAFEL": {
       "name": "Falafel",
       "desc": "White or whole wheat pita - filled with 3 vegan falafel balls & toppings of your choice.",
-      "price": "$10.99"
+      "price": "$9.99"
     },
 
     "SANDWICH_CHICKEN_BREAST_KEBAB": {
@@ -75,7 +75,7 @@ this.getMenu = function() {
     "PLATE_EAST_COAST_DONAIR": {
       "name": "East Coast Donair",
       "desc": "Rice with mixed vegetables and curried potatoes - with donair meat & sides and toppings of your choice with sweet donair sauce.",
-      "price": "$16.99"
+      "price": "$17.99"
     },
 
     "PLATE_CHICKEN_SHAWARMA": {
@@ -99,7 +99,7 @@ this.getMenu = function() {
     "PLATE_FALAFEL": {
       "name": "Falafel",
       "desc": "Rice with mixed vegetables and curried potatoes - with 3 falafel balls & sides, toppings and sauces of your choice",
-      "price": "$16.99"
+      "price": "$15.99"
     },
 
     "PLATE_CHICKEN_BREAST_KEBAB": {
@@ -129,12 +129,6 @@ this.getMenu = function() {
     "PLATE_FISH_FILLET": {
       "name": "Fish Fillet",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated fish fillet & sides, toppings and sauces of your choice",
-      "price": "$18.99"
-    },
-
-    "PLATE_SHRIMP": {
-      "name": "Shrimp",
-      "desc": "Rice with mixed vegetables and curried potatoes - with shrimp & sides, toppings and sauces of your choice",
       "price": "$18.99"
     },
 
@@ -204,27 +198,21 @@ this.getMenu = function() {
       "price": "$4.99"
     },
 
-    "SIDE_STUFFED_PEPPER_GF": {
-      "name": "Stuffed Pepper (GF)",
-      "desc": "Filled with green or red pepper, rice, tomato, onion, and fresh herbs.",
-      "price": "$8.99"
-    },
-
     "SIDE_CURRIED_POTATOES_GF": {
       "name": "Curried Potatoes (GF)",
-      "desc": "(n/a)",
+      "desc": "Cubed potatoes boiled with carrots",
       "price": "$7.99"
     },
 
     "SIDE_RICE_WITH_MIXED_VEGETABLES_GF": {
       "name": "Rice With Mixed Vegetables (GF)",
-      "desc": "(n/a)",
+      "desc": "Curried, parboiled rice mixed with corn, peas, and carrots",
       "price": "$7.99"
     },
 
     "SIDE_FRESH_CUT_FRIES_GF": {
       "name": "Fresh Cut Fries (GF)",
-      "desc": "(n/a)",
+      "desc": "Freshly cut potatoes deep-fried",
       "price": "$7.99"
     },
 
@@ -351,7 +339,7 @@ this.getMenu = function() {
     "VEGAN_FALAFEL_SANDWICH": {
       "name": "Falafel Sandwich",
       "desc": "White or whole wheat pita - filled with 3 vegan falafel balls & toppings of your choice.",
-      "price": "$10.99"
+      "price": "$9.99"
     },
 
     "VEGAN_VEGETARIAN_SANDWICH": {
@@ -363,7 +351,7 @@ this.getMenu = function() {
     "VEGAN_FALAFEL_PLATE": {
       "name": "Falafel Plate",
       "desc": "Rice and potatoes - with 3 falafel balls & sides, toppings and sauces of your choice",
-      "price": "$16.99"
+      "price": "$15.99"
     },
 
     "VEGAN_VEGETARIAN_PLATE": {
@@ -375,7 +363,7 @@ this.getMenu = function() {
     "VEGAN_FALAFEL_COMBO": {
       "name": "Falafel Combo",
       "desc": "Combo includes a falafel sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$16.99"
+      "price": "$15.99"
     },
 
     "VEGAN_VEGETARIAN_COMBO": {
@@ -402,12 +390,6 @@ this.getMenu = function() {
       "price": "$9.99"
     },
 
-    "VEGAN_STUFFED_PEPPER": {
-      "name": "Stuffed Pepper",
-      "desc": "Filled with green or red pepper, rice, tomato, onion, and fresh herbs.",
-      "price": "$8.99"
-    },
-
     "VEGAN_FALAFEL_BALL": {
       "name": "Falafel Ball",
       "desc": "Choice of chickpea, fava bean or mix of both (3 falafel balls).",
@@ -416,19 +398,19 @@ this.getMenu = function() {
 
     "VEGAN_CURRIED_POTATOES": {
       "name": "Curried Potatoes",
-      "desc": "(n/a)",
+      "desc": "Cubed potatoes boiled with carrots",
       "price": "$7.99"
     },
 
     "VEGAN_CURRIED_RICE_WITH_MIXED_VEGETABLES": {
-      "name": "Curried Rice With Mixed Vegetables",
-      "desc": "(n/a)",
+      "name": "Rice With Mixed Vegetables",
+      "desc": "Curried, parboiled rice mixed with corn, peas, and carrots",
       "price": "$7.99"
     },
 
     "VEGAN_FRESH_CUT_FRIES": {
       "name": "Fresh Cut Fries",
-      "desc": "(n/a)",
+      "desc": "Freshly cut potatoes deep-fried",
       "price": "$7.99"
     },
 
