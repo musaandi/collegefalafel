@@ -795,6 +795,8 @@ address {
 
 .catering-option-button:hover {
   opacity: 0.5;
+  color: white;
+  text-decoration: none;
 }
 
 #order-summary {
