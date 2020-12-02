@@ -9,7 +9,10 @@ angular.module('myApp.home', ['ngRoute'])
   });
 }])
 
-.controller('HomeCtrl', [function() {
-
-
+.controller('HomeCtrl', ['$http', function($http) {
+  $http.get("https://collegefalafel-api.herokuapp.com/")
+    .then(
+      function (res) { console.log('API Status: ' + res.data) },
+      function (err) {}
+    );
 }]);
