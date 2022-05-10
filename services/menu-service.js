@@ -321,7 +321,7 @@ this.getMenu = function() {
     "DESSERT_ALMOND_COOKIE": {
       "name": "Almond Cookie ",
       "desc": "Rich crescent-shaped cookie containing ground almonds.",
-      "price": "$2.99"
+      "price": "$3.29"
     },
 
     "DESSERT_HONEY_NUT_COOKIE": {
