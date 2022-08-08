@@ -38,7 +38,7 @@ this.getMenu = function() {
 
     "SANDWICH_CHICKEN_BREAST_KEBAB": {
       "name": "Chicken Breast Kebab",
-      "desc": "White or whole wheat pita - filled with marinated chicken breast & toppings of your choice with sweet donair sauce.",
+      "desc": "White or whole wheat pita - filled with marinated chicken breast & toppings of your choice.",
       "price": "$13.19"
     },
 
@@ -230,7 +230,7 @@ this.getMenu = function() {
 
     "SALAD_MEDITERRANEAN_SALAD_GF": {
       "name": "Mediterranean Salad (GF)",
-      "desc": "Tomatoes, green or red pepper, red onion, lettuce, cucumber, feta.",
+      "desc": "Tomatoes, green pepper, red onion, lettuce, cucumber, feta.",
       "price": "$9.89"
     },
 
@@ -434,7 +434,7 @@ this.getMenu = function() {
 
     "VEGAN_MEDITERRANEAN_SALAD_GF": {
       "name": "Mediterranean Salad (GF)",
-      "desc": "Tomatoes, green or red pepper, red onion, lettuce, cucumber, feta.",
+      "desc": "Tomatoes, green pepper, red onion, lettuce, cucumber, feta.",
       "price": "$9.89"
     },
 
