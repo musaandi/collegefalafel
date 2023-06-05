@@ -176,7 +176,7 @@ this.getMenu = function() {
 
     "SIDE_FALAFEL_BALL_GF": {
       "name": "Falafel Ball (GF)",
-      "desc": "Choice of chickpea, fava bean or mix of both (3 falafel balls).",
+      "desc": "Three falafel balls made with a base of chickpea mixed with onions, garlic, and herbs",
       "price": "$6.59"
     },
 
