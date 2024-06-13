@@ -9,127 +9,127 @@ this.getMenu = function() {
     "SANDWICH_EAST_COAST_DONAIR": {
       "name": "East Coast Donair",
       "desc": "White or whole wheat pita - filled with donair meat & toppings of your choice with sweet donair sauce.",
-      "price": "$13.19"
+      "price": "$14.11"
     },
 
     "SANDWICH_CHICKEN_SHAWARMA": {
       "name": "Chicken Shawarma",
       "desc": "White or whole wheat pita - filled with marinated chicken & toppings of your choice.",
-      "price": "$13.19"
+      "price": "$14.11"
     },
 
     "SANDWICH_BEEF_SHAWARMA": {
       "name": "Beef Shawarma",
       "desc": "White or whole wheat pita - filled with marinated beef & toppings of your choice with sweet donair sauce.",
-      "price": "$14.29"
+      "price": "$15.29"
     },
 
     "SANDWICH_LAMB_SHAWARMA": {
       "name": "Lamb Shawarma",
       "desc": "White or whole wheat pita - filled with marinated lamb & toppings of your choice.",
-      "price": "$14.29"
+      "price": "$15.29"
     },
 
     "SANDWICH_FALAFEL": {
       "name": "Falafel",
       "desc": "White or whole wheat pita - filled with 3 vegan falafel balls & toppings of your choice.",
-      "price": "$12.09"
+      "price": "$12.94"
     },
 
     "SANDWICH_CHICKEN_BREAST_KEBAB": {
       "name": "Chicken Breast Kebab",
       "desc": "White or whole wheat pita - filled with marinated chicken breast & toppings of your choice.",
-      "price": "$13.19"
+      "price": "$14.11"
     },
 
     "SANDWICH_VEAL_LIVER": {
       "name": "Veal Liver",
       "desc": "White or whole wheat pita - filled with marinated veal liver & toppings of your choice.",
-      "price": "$13.19"
+      "price": "$14.11"
     },
 
     "SANDWICH_KEFTA_BURGER": {
       "name": "Kefta Burger",
       "desc": "White or whole wheat pita - filled with lean ground beef & toppings of your choice",
-      "price": "$13.19"
+      "price": "$14.11"
     },
 
     "SANDWICH_VEGETARIAN": {
       "name": "Vegetarian",
       "desc": "White or whole wheat pita - filled with stuffed eggplant & toppings of your choice.",
-      "price": "$12.59"
+      "price": "$13.47"
     },
 
     "SANDWICH_FISH_FILLET": {
       "name": "Fish Fillet",
       "desc": "White or whole wheat pita - filled with marinated fish fillet & toppings of your choice.",
-      "price": "$14.29"
+      "price": "$15.29"
     },
 
     "SANDWICH_BREAKFAST_SANDWICH": {
       "name": "Breakfast Sandwich",
       "desc": "White or whole wheat pita - filled with scrambled eggs & toppings of your choice.",
-      "price": "$12.09"
+      "price": "$12.93"
     },
 
     "PLATE_EAST_COAST_DONAIR": {
       "name": "East Coast Donair",
       "desc": "Rice with mixed vegetables and curried potatoes - with donair meat & sides and toppings of your choice with sweet donair sauce.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "PLATE_CHICKEN_SHAWARMA": {
       "name": "Chicken Shawarma",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated chicken & sides, toppings and sauces of your choice",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "PLATE_BEEF_SHAWARMA": {
       "name": "Beef Shawarma",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated beef & sides, toppings and sauces of your choice",
-      "price": "$20.89"
+      "price": "$22.37"
     },
 
     "PLATE_LAMB_SHAWARMA": {
       "name": "Lamb Shawarma",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated lamb & sides, toppings and sauces of your choice",
-      "price": "$20.89"
+      "price": "$22.37"
     },
 
     "PLATE_FALAFEL": {
       "name": "Falafel",
       "desc": "Rice with mixed vegetables and curried potatoes - with 3 falafel balls & sides, toppings and sauces of your choice",
-      "price": "$17.59"
+      "price": "$18.82"
     },
 
     "PLATE_CHICKEN_BREAST_KEBAB": {
       "name": "Chicken Breast Kebab",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated chicken breast & sides, toppings and sauces of your choice",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "PLATE_VEAL_LIVER": {
       "name": "Veal Liver",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated veal liver & sides, toppings and sauces of your choice",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "PLATE_KEFTA_BURGER": {
       "name": "Kefta Burger",
       "desc": "Rice with mixed vegetables and curried potatoes - with lean ground beef & sides, toppings and sauces of your choice",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "PLATE_VEGETARIAN": {
       "name": "Vegetarian",
       "desc": "Rice with mixed vegetables and curried potatoes - with stuffed eggplant & sides, toppings and sauces of your choice",
-      "price": "$17.99"
+      "price": "$19.24"
     },
 
     "PLATE_FISH_FILLET": {
       "name": "Fish Fillet",
       "desc": "Rice with mixed vegetables and curried potatoes - with marinated fish fillet & sides, toppings and sauces of your choice",
-      "price": "$20.89"
+      "price": "$22.35"
     },
 
     "SIDE_SPINACH_PIE": {
@@ -237,67 +237,67 @@ this.getMenu = function() {
     "COMBO_EAST_COAST_DONAIR": {
       "name": "East Coast Donair",
       "desc": "Combo includes a donair sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "COMBO_CHICKEN_SHAWARMA": {
       "name": "Chicken Shawarma",
       "desc": "Combo includes a chicken shawarmasandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "COMBO_BEEF_SHAWARMA": {
       "name": "Beef Shawarma",
       "desc": "Combo includes a beef shawarma sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$20.89"
+      "price": "$22.35"
     },
 
     "COMBO_LAMB_SHAWARMA": {
       "name": "Lamb Shawarma",
       "desc": "Combo includes a lamb shawarma sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$20.89"
+      "price": "$22.35"
     },
 
     "COMBO_FALAFEL": {
       "name": "Falafel",
       "desc": "Combo includes a falafel sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$17.59"
+      "price": "$18.82"
     },
 
     "COMBO_CHICKEN_BREAST_KEBAB": {
       "name": "Chicken Breast Kebab",
       "desc": "Combo includes a chicken breast kebab sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "COMBO_VEAL_LIVER": {
       "name": "Veal Liver",
       "desc": "Combo includes a veal liversandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "COMBO_KEFTA_BURGER": {
       "name": "Kefta Burger",
       "desc": "Combo includes a kefta burger sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$19.79"
+      "price": "$21.17"
     },
 
     "COMBO_VEGETARIAN": {
       "name": "Vegetarian",
       "desc": "Combo includes a vegetarian sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$17.99"
+      "price": "$19.24"
     },
 
     "COMBO_FISH_FILLET": {
       "name": "Fish Fillet",
       "desc": "Combo includes a fish fillet sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$20.89"
+      "price": "$22.35"
     },
 
     "COMBO_BREAKFAST_SANDWICH": {
       "name": "Breakfast Sandwich",
       "desc": "Combo includes a breakfest sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$17.99"
+      "price": "$19.24"
     },
 
     "DESSERT_RICE_PUDDING_GF": {
@@ -339,37 +339,37 @@ this.getMenu = function() {
     "VEGAN_FALAFEL_SANDWICH": {
       "name": "Falafel Sandwich",
       "desc": "White or whole wheat pita - filled with 3 vegan falafel balls & toppings of your choice.",
-      "price": "$12.09"
+      "price": "$12.93"
     },
 
     "VEGAN_VEGETARIAN_SANDWICH": {
       "name": "Vegetarian Sandwich",
       "desc": "White or whole wheat pita - filled with stuffed eggplant & toppings of your choice.",
-      "price": "$12.59"
+      "price": "$13.47"
     },
 
     "VEGAN_FALAFEL_PLATE": {
       "name": "Falafel Plate",
       "desc": "Rice and potatoes - with 3 falafel balls & sides, toppings and sauces of your choice",
-      "price": "$17.59"
+      "price": "$18.82"
     },
 
     "VEGAN_VEGETARIAN_PLATE": {
       "name": "Vegetarian Plate",
       "desc": "Rice and potatoes - with stuffed eggplant & sides, toppings and sauces of your choice",
-      "price": "$17.99"
+      "price": "$19.24"
     },
 
     "VEGAN_FALAFEL_COMBO": {
       "name": "Falafel Combo",
       "desc": "Combo includes a falafel sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$17.09"
+      "price": "$18.82"
     },
 
     "VEGAN_VEGETARIAN_COMBO": {
       "name": "Vegetarian Combo",
       "desc": "Combo includes a vegetarian sandwich with your choice of toppings and sauces a beverage and a soup or salad.",
-      "price": "$17.59"
+      "price": "$19.24"
     },
 
     "VEGAN_VEGETARIAN_SAMOUSA": {
